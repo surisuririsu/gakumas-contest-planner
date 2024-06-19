@@ -1,0 +1,17 @@
+.configurator {
+  width: 400px;
+  padding: 48px;
+  color: #333;
+
+  .idol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    .name {
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
+}
