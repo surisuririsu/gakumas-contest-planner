@@ -6,11 +6,11 @@
   align-items: center;
 
   .sidebar {
-    width: 180px;
-    overflow: hidden;
+    max-width: 200px;
+    overflow: hidden auto;
     transition: all 0.2s;
     &.hidden {
-      width: 0;
+      max-width: 0;
     }
   }
 

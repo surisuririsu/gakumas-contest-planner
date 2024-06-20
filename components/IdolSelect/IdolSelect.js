@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import { IDOLS } from "@/constants/idols";
-import styles from "./IdolPicker.module.scss";
+import styles from "./IdolSelect.module.scss";
 
-export default function IdolPicker({ onPickIdol }) {
+export default function IdolSelect({ onPickIdol }) {
   return (
     <div className={styles.container}>
       {IDOLS.map(({ id, alias, title, name, plan }) => (
@@ -19,7 +19,13 @@ export default function IdolPicker({ onPickIdol }) {
             <span className={styles.title}>{title}</span>
             <span className={styles.name}>{name}</span>
           </div>
-          <Image src={`/idols/${alias}.png`} width={180} height={320} alt="" />
+          <Image
+            className={styles.image}
+            src={`/idols/${alias}.png`}
+            width={180}
+            height={180}
+            alt=""
+          />
         </div>
       ))}
     </div>
