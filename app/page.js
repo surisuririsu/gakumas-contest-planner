@@ -1,28 +1,47 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import PlanSelect from "@/components/PlanSelect";
 import IdolSelect from "@/components/IdolSelect";
 import Configurator from "@/components/Configurator";
 import styles from "./page.module.scss";
 
 export default function Home() {
-  const [plan, setPlan] = useState("sense");
-  const [idol, setIdol] = useState("saki");
-  const [idolId, setIdolId] = useState(1);
-  const [showIdolSelect, setShowIdolSelect] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialPlan = searchParams.get("plan");
+  const initialIdol = searchParams.get("idol");
+
+  const [plan, setPlan] = useState(initialPlan || "sense");
+  const [idol, setIdol] = useState(initialIdol || "saki");
+
+  const createQueryString = useCallback(
+    (name, value) => {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set(name, value);
+      return params.toString();
+    },
+    [searchParams]
+  );
+
+  const changePlan = (newPlan) => {
+    router.replace(`/?${createQueryString("plan", newPlan)}`);
+    setPlan(newPlan);
+  };
+  const changeIdol = (newIdol) => {
+    router.replace(`/?${createQueryString("idol", newIdol)}`);
+    setIdol(newIdol);
+  };
 
   return (
     <main className={styles.main}>
       <div className={styles.content}>
-        <PlanSelect selected={plan} onChange={setPlan} />
-        <IdolSelect selected={idol} onChange={setIdol} />
-        <div
-          className={`${styles.sidebar} ${!showIdolSelect && styles.hidden}`}
-        ></div>
-        <Configurator
-          idolId={idolId}
-          onClickIdol={() => setShowIdolSelect(!showIdolSelect)}
-        />
+        <div className={styles.header}>
+          <PlanSelect selected={plan} onChange={changePlan} />
+          <IdolSelect selected={idol} onChange={changeIdol} />
+        </div>
+        <hr />
+        <Configurator plan={plan} idol={idol} />
       </div>
     </main>
   );

@@ -1,15 +1,39 @@
 .bank {
   box-shadow: 0 0 4px #666 inset;
   border-radius: 16px;
-  padding: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  overflow-y: scroll;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .bankInner {
+    padding: 16px;
+    display: grid;
+    grid-template-rows: repeat(auto-fill, 60px);
+    grid-template-columns: repeat(auto-fill, 60px);
+    grid-gap: 8px;
+    justify-content: space-between;
+
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: grab;
+    }
+  }
 }
 
 .name {
-  margin-top: 8px;
   font-size: 16px;
+  height: 16px;
   font-weight: bold;
   text-align: center;
+  display: block;
+  white-space: pre-wrap;
 }

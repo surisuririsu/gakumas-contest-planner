@@ -1,27 +1,40 @@
 import { useState } from "react";
-import Image from "next/image";
-import { ITEMS } from "@/constants/items";
+import { useDrop } from "react-dnd";
+import ItemBankElement from "./ItemBankElement";
+import { MEMORABLE_ITEMS } from "@/constants/items";
 import styles from "./ItemBank.module.scss";
 
-export default function ItemBank({ plan, idol }) {
+export default function ItemBank({ plan, idol, changeItem }) {
   const [focusedName, setFocusedName] = useState("");
+  const [, drop] = useDrop(() => ({
+    accept: "PITEM",
+    drop: (item) => {
+      if (item.fromIndex != -1) {
+        changeItem(item.fromIndex, 0);
+      }
+    },
+  }));
+
+  const filteredItems = MEMORABLE_ITEMS.filter((item) => {
+    if (item.plan && item.plan != plan) return false;
+    if (item.idol && item.idol != idol) return false;
+    return true;
+  });
+
   return (
-    <div>
-      <div className={styles.bank}>
-        {ITEMS.map(({ id, alias, name }) => (
-          <div key={id} className={styles.item}>
-            <Image
-              src={`/items/${alias}.png`}
-              width={60}
-              height={60}
-              alt={name}
-              onMouseEnter={() => setFocusedName(name)}
-              onMouseLeave={() => setFocusedName("")}
+    <>
+      <div className={styles.bank} ref={drop}>
+        <div className={styles.bankInner}>
+          {filteredItems.map((item) => (
+            <ItemBankElement
+              key={item.id}
+              item={item}
+              setFocusedName={setFocusedName}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <div className={styles.name}>{focusedName}</div>
-    </div>
+    </>
   );
 }

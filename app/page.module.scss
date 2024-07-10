@@ -1,27 +1,33 @@
 .main {
-  height: 100dvh;
+  min-height: 100dvh;
   background-color: #333;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .sidebar {
-    max-width: 200px;
-    overflow: hidden auto;
-    transition: all 0.2s;
-    &.hidden {
-      max-width: 0;
-    }
+  .header {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  hr {
+    min-height: 4px;
+    border: none;
+    border-radius: 2px;
+    background-color: #ccc;
   }
 
   .content {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    height: 90dvh;
+    width: 90dvw;
+    max-width: 1280px;
     padding: 32px;
-    height: 720px;
     overflow: hidden;
     border-radius: 16px;
-    background-color: #f7f7f7;
+    background-color: #f6f6f6;
   }
 }

@@ -1,23 +1,18 @@
-import Image from "next/image";
-import { CARDS_BY_ID } from "@/constants/cards";
+import CardListElement from "./CardListElement";
 import styles from "./CardList.module.scss";
 
-export default function CardList({ cards }) {
+export default function CardList({ groupIndex, cards, changeCard }) {
   return (
     <div className={styles.list}>
-      {cards.map((cardId) => {
-        const card = CARDS_BY_ID[cardId];
-        return (
-          <div key={cardId} className={styles.card}>
-            <Image
-              src={`/cards/${card ? card.alias : "placeholder"}.png`}
-              width={80}
-              height={80}
-              alt=""
-            />
-          </div>
-        );
-      })}
+      {cards.map((cardId, index) => (
+        <CardListElement
+          key={`${index}_${cardId}`}
+          groupIndex={groupIndex}
+          index={index}
+          cardId={cardId}
+          changeCard={changeCard}
+        />
+      ))}
     </div>
   );
 }
