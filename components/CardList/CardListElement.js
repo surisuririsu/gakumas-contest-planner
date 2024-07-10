@@ -1,14 +1,12 @@
+import { useContext } from "react";
 import Image from "next/image";
 import { useDrag, useDrop } from "react-dnd";
+import IdolContext from "@/contexts/IdolContext";
 import { CARDS_BY_ID } from "@/constants/cards";
 import styles from "./CardList.module.scss";
 
-export default function CardListElement({
-  groupIndex,
-  index,
-  cardId,
-  changeCard,
-}) {
+export default function CardListElement({ groupIndex, index, cardId }) {
+  const { changeCard } = useContext(IdolContext);
   const card = CARDS_BY_ID[cardId];
 
   const [, drag] = useDrag(() => ({

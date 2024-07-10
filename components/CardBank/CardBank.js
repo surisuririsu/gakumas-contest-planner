@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
-import CardBankElement from "./CardBankElement";
+import IdolContext from "@/contexts/IdolContext";
 import { MEMORABLE_CARDS } from "@/constants/cards";
+import CardBankElement from "./CardBankElement";
 import styles from "./CardBank.module.scss";
 
-export default function CardBank({ plan, idol, changeCard }) {
+export default function CardBank() {
+  const { plan, idol, changeCard } = useContext(IdolContext);
   const [focusedName, setFocusedName] = useState(" ");
   const [, drop] = useDrop(() => ({
     accept: "CARD",

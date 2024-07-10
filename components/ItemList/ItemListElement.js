@@ -1,9 +1,12 @@
+import { useContext } from "react";
 import Image from "next/image";
 import { useDrag, useDrop } from "react-dnd";
+import IdolContext from "@/contexts/IdolContext";
 import { ITEMS_BY_ID } from "@/constants/items";
 import styles from "./ItemList.module.scss";
 
-export default function ItemListElement({ index, itemId, changeItem }) {
+export default function ItemListElement({ index, itemId }) {
+  const { changeItem } = useContext(IdolContext);
   const item = ITEMS_BY_ID[itemId];
 
   const [, drag] = useDrag(() => ({

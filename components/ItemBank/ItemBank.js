@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
-import ItemBankElement from "./ItemBankElement";
+import IdolContext from "@/contexts/IdolContext";
 import { MEMORABLE_ITEMS } from "@/constants/items";
+import ItemBankElement from "./ItemBankElement";
 import styles from "./ItemBank.module.scss";
 
-export default function ItemBank({ plan, idol, changeItem }) {
+export default function ItemBank() {
+  const { plan, idol, changeItem } = useContext(IdolContext);
   const [focusedName, setFocusedName] = useState("");
   const [, drop] = useDrop(() => ({
     accept: "PITEM",

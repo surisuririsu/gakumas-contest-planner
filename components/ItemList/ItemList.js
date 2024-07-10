@@ -1,7 +1,7 @@
 import ItemListElement from "./ItemListElement";
 import styles from "./ItemList.module.scss";
 
-export default function ItemList({ items, changeItem }) {
+export default function ItemList({ items }) {
   return (
     <div className={styles.list}>
       {items.map((itemId, index) => (
@@ -9,7 +9,6 @@ export default function ItemList({ items, changeItem }) {
           key={`${index}_${itemId}`}
           index={index}
           itemId={itemId}
-          changeItem={changeItem}
         />
       ))}
     </div>

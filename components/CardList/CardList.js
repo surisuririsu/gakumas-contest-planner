@@ -1,7 +1,7 @@
 import CardListElement from "./CardListElement";
 import styles from "./CardList.module.scss";
 
-export default function CardList({ groupIndex, cards, changeCard }) {
+export default function CardList({ groupIndex, cards }) {
   return (
     <div className={styles.list}>
       {cards.map((cardId, index) => (
@@ -10,7 +10,6 @@ export default function CardList({ groupIndex, cards, changeCard }) {
           groupIndex={groupIndex}
           index={index}
           cardId={cardId}
-          changeCard={changeCard}
         />
       ))}
     </div>
