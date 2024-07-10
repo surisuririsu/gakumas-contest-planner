@@ -8,26 +8,47 @@
   .header {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 1em;
   }
 
   hr {
-    min-height: 4px;
+    min-height: 0.25em;
     border: none;
-    border-radius: 2px;
+    border-radius: 0.125em;
     background-color: #ccc;
   }
 
   .content {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1em;
     height: 90dvh;
     width: 90dvw;
     max-width: 1280px;
-    padding: 32px;
+    padding: 2em;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 1em;
     background-color: #f6f6f6;
+  }
+
+  @media only screen and (max-width: 1072px) {
+    .content {
+      height: 100dvh;
+      width: 100dvh;
+      border-radius: 0;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media only screen and (max-width: 786px) {
+    .content {
+      overflow: auto;
+    }
+  }
+
+  @media only screen and (max-width: 496px) {
+    .content {
+      font-size: 0.6rem;
+    }
   }
 }

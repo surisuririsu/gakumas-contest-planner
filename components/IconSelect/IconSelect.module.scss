@@ -2,21 +2,27 @@
   align-self: flex-start;
   display: flex;
   flex-wrap: wrap;
-  gap: 2px;
-  padding: 8px;
-  border-radius: 36px;
-  border: 4px solid #ccc;
+  gap: 0.125em;
+  padding: 0.5em;
+  border-radius: 2.25em;
+  border: 0.25em solid #ccc;
 
   .option {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 8px;
-    border-radius: 28px;
+    padding: 0.5em;
+    border-radius: 1.75em;
     transition: all 0.3s;
 
+    .imageWrapper {
+      position: relative;
+      width: 2.5em;
+      height: 2.5em;
+    }
+
     &.selected {
-      box-shadow: 0 0 6px #666;
+      box-shadow: 0 0 0.375em #666;
     }
   }
 }

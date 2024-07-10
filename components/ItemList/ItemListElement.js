@@ -28,9 +28,9 @@ export default function ItemListElement({ index, itemId }) {
       <div className={styles.item} ref={drag}>
         <Image
           src={`/items/${item ? item.alias : "placeholder"}.png`}
-          width={60}
-          height={60}
+          fill
           alt=""
+          sizes="3.75em"
         />
       </div>
     </div>

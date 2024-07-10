@@ -1,40 +1,52 @@
 .configurator {
-  padding: 16px 8px;
+  padding: 1em 0;
   color: #333;
 
   display: flex;
   flex-direction: row;
-  gap: 16px;
-  overflow: hidden;
+  gap: 1em;
+  min-height: 0;
+  flex: 1;
+
+  @media only screen and (max-width: 786px) {
+    flex-direction: column;
+    min-height: unset;
+  }
 
   .section {
     min-width: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1em;
+  }
+
+  .loadout {
+    @extend .section;
+    overflow: auto;
+    padding: 0 0.5em;
   }
 
   .banks {
+    @extend .section;
     flex: 1;
   }
 
   .bankTabs {
     display: flex;
-    gap: 16px;
+    gap: 1em;
 
     a {
       flex: 1;
       text-align: center;
       font-weight: bold;
       color: #666;
-      padding: 8px;
-      height: 36px;
-      border-radius: 18px;
+      padding: 0.5em;
+      border-radius: 1em;
       transition: all 0.3s;
       cursor: pointer;
 
       &.active {
-        box-shadow: 0 0 6px #666;
+        box-shadow: 0 0 0.375em #666;
       }
     }
   }
