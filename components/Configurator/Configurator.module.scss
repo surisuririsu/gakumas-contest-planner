@@ -1,42 +1,38 @@
 .configurator {
-  padding: 48px;
+  padding: 16px 8px;
   color: #333;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 16px;
+  overflow: hidden;
 
-  .idol {
+  .section {
+    min-width: 0;
+    flex: 1;
     display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
+    flex-direction: column;
+    gap: 16px;
+  }
 
-    .text {
+  .bankTabs {
+    display: flex;
+    gap: 16px;
+
+    a {
       flex: 1;
-    }
-
-    .name {
-      font-size: 24px;
+      text-align: center;
       font-weight: bold;
-    }
-  }
+      color: #666;
+      padding: 8px;
+      height: 36px;
+      border-radius: 18px;
+      transition: all 0.3s;
+      cursor: pointer;
 
-  .items {
-    display: flex;
-    gap: 4px;
-  }
-
-  .cards {
-    .main {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-
-    .sub {
-      display: flex;
-      gap: 8px;
+      &.active {
+        box-shadow: 0 0 6px #666;
+      }
     }
   }
 }

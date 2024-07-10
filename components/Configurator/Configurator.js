@@ -1,73 +1,45 @@
-import { useState } from "react";
-import Image from "next/image";
-import { CARDS_BY_ID } from "@/constants/cards";
-import { IDOLS_BY_ID } from "@/constants/idols";
-import { ITEMS_BY_ID } from "@/constants/items";
+import { useContext, useState } from "react";
+import { DndProvider } from "react-dnd";
+import { HTML5Backend } from "react-dnd-html5-backend";
+import CardBank from "@/components/CardBank";
+import CardList from "@/components/CardList";
+import ItemBank from "@/components/ItemBank";
+import ItemList from "@/components/ItemList";
+import IdolContext from "@/contexts/IdolContext";
 import styles from "./Configurator.module.scss";
 
-export default function Configurator({ idolId, onClickIdol }) {
-  const [items, setItems] = useState([1, 1, 1, 1]);
-  const [mainCards, setMainCards] = useState([1, 1, 1, 1, 1, 1]);
-  const [subCards, setsubCards] = useState([1, 1, 1, 1, 1, 1]);
-  const { alias, name, plan, title } = IDOLS_BY_ID[idolId];
+export default function Configurator() {
+  const { items, cardGroups } = useContext(IdolContext);
+  const [activeBank, setActiveBank] = useState("CARD");
+
   return (
-    <div className={styles.configurator}>
-      <div className={styles.idol} onClick={onClickIdol}>
-        <Image src={`/idols/${alias}.png`} width={45} height={80} alt="" />
-        <div className={styles.text}>
-          <div>【{title}】</div>
-          <div className={styles.name}>{name}</div>
+    <DndProvider backend={HTML5Backend}>
+      <div className={styles.configurator}>
+        <div className={styles.section}>
+          <ItemList items={items} />
+          {cardGroups.map((cards, index) => (
+            <CardList key={index} groupIndex={index} cards={cards} />
+          ))}
         </div>
-        <Image src={`/plans/${plan}.png`} width={40} height={40} alt="" />
-      </div>
-      <div className={styles.items}>
-        {items.map((itemId) => {
-          const item = ITEMS_BY_ID[itemId];
-          return (
-            <div>
-              <Image
-                src={`/items/${item ? item.alias : "placeholder"}.png`}
-                width={60}
-                height={60}
-                alt=""
-              />
-            </div>
-          );
-        })}
-      </div>
-      <div className={styles.cards}>
-        <div className={styles.main}>
-          {mainCards.map((cardId) => {
-            const card = CARDS_BY_ID[cardId];
-            return (
-              <div>
-                <Image
-                  src={`/cards/${card ? card.alias : "placeholder"}.png`}
-                  width={80}
-                  height={80}
-                  alt=""
-                />
-              </div>
-            );
-          })}
-        </div>
-        <div className={styles.sub}>
-          {subCards.map((cardId) => {
-            const card = CARDS_BY_ID[cardId];
-            return (
-              <div>
-                <Image
-                  src={`/cards/${card ? card.alias : "placeholder"}.png`}
-                  width={80}
-                  height={80}
-                  alt=""
-                />
-              </div>
-            );
-          })}
+        <div className={styles.section}>
+          <div className={styles.bankTabs}>
+            <a
+              className={activeBank === "CARD" ? styles.active : ""}
+              onClick={() => setActiveBank("CARD")}
+            >
+              Skill Cards
+            </a>
+            <a
+              className={activeBank === "PITEM" ? styles.active : ""}
+              onClick={() => setActiveBank("PITEM")}
+            >
+              P Items
+            </a>
+          </div>
+          {activeBank === "PITEM" && <ItemBank />}
+          {activeBank === "CARD" && <CardBank />}
         </div>
       </div>
-      <hr />
-    </div>
+    </DndProvider>
   );
 }

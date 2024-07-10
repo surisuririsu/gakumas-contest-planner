@@ -31,6 +31,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
+          ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
+          ["react-dnd-html5-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
           ["sass", "npm:1.77.6"]\
         ],\
@@ -320,6 +322,33 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@pkgjs-parseargs-npm-0.11.0-cd2a3fe948-115e8ceeec.zip/node_modules/@pkgjs/parseargs/",\
         "packageDependencies": [\
           ["@pkgjs/parseargs", "npm:0.11.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@react-dnd/asap", [\
+      ["npm:5.0.2", {\
+        "packageLocation": "./.yarn/cache/@react-dnd-asap-npm-5.0.2-66021d3d61-a75039720b.zip/node_modules/@react-dnd/asap/",\
+        "packageDependencies": [\
+          ["@react-dnd/asap", "npm:5.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@react-dnd/invariant", [\
+      ["npm:4.0.2", {\
+        "packageLocation": "./.yarn/cache/@react-dnd-invariant-npm-4.0.2-826eacc1ea-b638e9643e.zip/node_modules/@react-dnd/invariant/",\
+        "packageDependencies": [\
+          ["@react-dnd/invariant", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@react-dnd/shallowequal", [\
+      ["npm:4.0.2", {\
+        "packageLocation": "./.yarn/cache/@react-dnd-shallowequal-npm-4.0.2-f944714335-7f21d691bd.zip/node_modules/@react-dnd/shallowequal/",\
+        "packageDependencies": [\
+          ["@react-dnd/shallowequal", "npm:4.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1115,6 +1144,18 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["dir-glob", "npm:3.0.1"],\
           ["path-type", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["dnd-core", [\
+      ["npm:16.0.1", {\
+        "packageLocation": "./.yarn/cache/dnd-core-npm-16.0.1-552224cee0-711dc30f88.zip/node_modules/dnd-core/",\
+        "packageDependencies": [\
+          ["dnd-core", "npm:16.0.1"],\
+          ["@react-dnd/asap", "npm:5.0.2"],\
+          ["@react-dnd/invariant", "npm:4.0.2"],\
+          ["redux", "npm:4.2.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1970,6 +2011,8 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
+          ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
+          ["react-dnd-html5-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
           ["sass", "npm:1.77.6"]\
         ],\
@@ -2196,6 +2239,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["hasown", "npm:2.0.2"],\
           ["function-bind", "npm:1.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["hoist-non-react-statics", [\
+      ["npm:3.3.2", {\
+        "packageLocation": "./.yarn/cache/hoist-non-react-statics-npm-3.3.2-e7b709e6c1-1acbe85f33.zip/node_modules/hoist-non-react-statics/",\
+        "packageDependencies": [\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react-is", "npm:16.13.1"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3484,6 +3537,47 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["react-dnd", [\
+      ["npm:16.0.1", {\
+        "packageLocation": "./.yarn/cache/react-dnd-npm-16.0.1-974f047d7b-e27cf5156c.zip/node_modules/react-dnd/",\
+        "packageDependencies": [\
+          ["react-dnd", "npm:16.0.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-dnd-virtual-c84d0670c4/0/cache/react-dnd-npm-16.0.1-974f047d7b-e27cf5156c.zip/node_modules/react-dnd/",\
+        "packageDependencies": [\
+          ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
+          ["@react-dnd/invariant", "npm:4.0.2"],\
+          ["@react-dnd/shallowequal", "npm:4.0.2"],\
+          ["@types/hoist-non-react-statics", null],\
+          ["@types/node", null],\
+          ["@types/react", null],\
+          ["dnd-core", "npm:16.0.1"],\
+          ["fast-deep-equal", "npm:3.1.3"],\
+          ["hoist-non-react-statics", "npm:3.3.2"],\
+          ["react", "npm:18.3.1"]\
+        ],\
+        "packagePeers": [\
+          "@types/hoist-non-react-statics",\
+          "@types/node",\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-dnd-html5-backend", [\
+      ["npm:16.0.1", {\
+        "packageLocation": "./.yarn/cache/react-dnd-html5-backend-npm-16.0.1-754940d855-fa0feacc01.zip/node_modules/react-dnd-html5-backend/",\
+        "packageDependencies": [\
+          ["react-dnd-html5-backend", "npm:16.0.1"],\
+          ["dnd-core", "npm:16.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["react-dom", [\
       ["npm:18.3.1", {\
         "packageLocation": "./.yarn/cache/react-dom-npm-18.3.1-a805663f38-3f4b73a3aa.zip/node_modules/react-dom/",\
@@ -3523,6 +3617,16 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["readdirp", "npm:3.6.0"],\
           ["picomatch", "npm:2.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["redux", [\
+      ["npm:4.2.1", {\
+        "packageLocation": "./.yarn/cache/redux-npm-4.2.1-e7e2cf2e37-371e4833b6.zip/node_modules/redux/",\
+        "packageDependencies": [\
+          ["redux", "npm:4.2.1"],\
+          ["@babel/runtime", "npm:7.24.7"]\
         ],\
         "linkType": "HARD"\
       }]\
