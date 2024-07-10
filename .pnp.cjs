@@ -33,6 +33,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
           ["react-dnd-html5-backend", "npm:16.0.1"],\
+          ["react-dnd-touch-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
           ["sass", "npm:1.77.6"]\
         ],\
@@ -2013,6 +2014,7 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
           ["react-dnd-html5-backend", "npm:16.0.1"],\
+          ["react-dnd-touch-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
           ["sass", "npm:1.77.6"]\
         ],\
@@ -3573,6 +3575,17 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/react-dnd-html5-backend-npm-16.0.1-754940d855-fa0feacc01.zip/node_modules/react-dnd-html5-backend/",\
         "packageDependencies": [\
           ["react-dnd-html5-backend", "npm:16.0.1"],\
+          ["dnd-core", "npm:16.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-dnd-touch-backend", [\
+      ["npm:16.0.1", {\
+        "packageLocation": "./.yarn/cache/react-dnd-touch-backend-npm-16.0.1-2b96ba84be-449a6d0a63.zip/node_modules/react-dnd-touch-backend/",\
+        "packageDependencies": [\
+          ["react-dnd-touch-backend", "npm:16.0.1"],\
+          ["@react-dnd/invariant", "npm:4.0.2"],\
           ["dnd-core", "npm:16.0.1"]\
         ],\
         "linkType": "HARD"\

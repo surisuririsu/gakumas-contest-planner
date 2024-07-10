@@ -1,6 +1,8 @@
+"use client";
 import { useContext, useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
+import { TouchBackend } from "react-dnd-touch-backend";
 import CardBank from "@/components/CardBank";
 import CardList from "@/components/CardList";
 import ItemBank from "@/components/ItemBank";
@@ -11,9 +13,13 @@ import styles from "./Configurator.module.scss";
 export default function Configurator() {
   const { items, cardGroups } = useContext(IdolContext);
   const [activeBank, setActiveBank] = useState("CARD");
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
 
   return (
-    <DndProvider backend={HTML5Backend}>
+    <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
       <div className={styles.configurator}>
         <div className={styles.loadout}>
           <ItemList items={items} />

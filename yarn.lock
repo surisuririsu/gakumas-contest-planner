@@ -1588,6 +1588,7 @@ __metadata:
     react: "npm:^18"
     react-dnd: "npm:^16.0.1"
     react-dnd-html5-backend: "npm:^16.0.1"
+    react-dnd-touch-backend: "npm:^16.0.1"
     react-dom: "npm:^18"
     sass: "npm:^1.77.6"
   languageName: unknown
@@ -2955,6 +2956,16 @@ __metadata:
   dependencies:
     dnd-core: "npm:^16.0.1"
   checksum: 10/fa0feacc01ba8c923fc21461cc5919a856f09384f9a684b4c70ab9cdddc4a6ec64f0de4f65946a8061284ed92c5e3104caca56ae58884235604898a909d82e90
+  languageName: node
+  linkType: hard
+
+"react-dnd-touch-backend@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "react-dnd-touch-backend@npm:16.0.1"
+  dependencies:
+    "@react-dnd/invariant": "npm:^4.0.1"
+    dnd-core: "npm:^16.0.1"
+  checksum: 10/449a6d0a63426fcd166124ce1575248c4ca83e2b1e1317fe8dd17dcc49ecb80ef1eb62d113b4200920970acd448423f1601c320b4dd0856a2e7c95f56560344b
   languageName: node
   linkType: hard
 
