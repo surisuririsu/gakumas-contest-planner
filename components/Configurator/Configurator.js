@@ -15,7 +15,7 @@ export default function Configurator() {
   return (
     <DndProvider backend={HTML5Backend}>
       <div className={styles.configurator}>
-        <div className={styles.section}>
+        <div className={styles.loadout}>
           <ItemList items={items} />
           {cardGroups.map((cards, index) => (
             <CardList
@@ -25,7 +25,7 @@ export default function Configurator() {
             />
           ))}
         </div>
-        <div className={`${styles.section} ${styles.banks}`}>
+        <div className={styles.banks}>
           <div className={styles.bankTabs}>
             <a
               className={activeBank === "CARD" ? styles.active : ""}

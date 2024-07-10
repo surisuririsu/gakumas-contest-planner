@@ -28,9 +28,9 @@ export default function CardListElement({ groupIndex, index, cardId }) {
       <div className={styles.card} ref={drag}>
         <Image
           src={`/cards/${card ? card.alias : "placeholder"}.png`}
-          width={80}
-          height={80}
+          fill
           alt=""
+          sizes="5em"
         />
       </div>
     </div>

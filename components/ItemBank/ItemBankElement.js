@@ -12,11 +12,11 @@ export default function ItemBankElement({ item, setFocusedName }) {
     <div key={item.id} className={styles.item} ref={drag}>
       <Image
         src={`/items/${item.alias}.png`}
-        width={60}
-        height={60}
+        fill
         alt={item.name}
         onMouseEnter={() => setFocusedName(item.name)}
         onMouseLeave={() => setFocusedName("")}
+        sizes="3.75em"
       />
     </div>
   );

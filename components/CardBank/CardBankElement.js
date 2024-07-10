@@ -12,11 +12,11 @@ export default function CardBankElement({ card, setFocusedName }) {
     <div key={card.id} className={styles.card} ref={drag}>
       <Image
         src={`/cards/${card.alias}.png`}
-        width={80}
-        height={80}
+        fill
         alt={card.name}
         onMouseEnter={() => setFocusedName(card.name)}
         onMouseLeave={() => setFocusedName(" ")}
+        sizes="5em"
       />
     </div>
   );

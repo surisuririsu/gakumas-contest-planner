@@ -11,13 +11,15 @@ export default function IconSelect({ options, selected, onChange }) {
             selected === alias ? styles.selected : ""
           }`}
         >
-          <Image
-            src={iconSrc}
-            width={40}
-            height={40}
-            alt=""
-            onClick={() => onChange(alias)}
-          />
+          <div className={styles.imageWrapper}>
+            <Image
+              src={iconSrc}
+              fill
+              alt=""
+              onClick={() => onChange(alias)}
+              sizes="2.5em"
+            />
+          </div>
         </div>
       ))}
     </div>
