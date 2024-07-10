@@ -1,4 +1,4 @@
-export const IDOLS = [
+export const P_IDOLS = [
   {
     id: 33,
     alias: "saki_boomboompow",
@@ -265,7 +265,7 @@ export const IDOLS = [
   },
 ];
 
-export const IDOLS_BY_ID = IDOLS.reduce(
+export const P_IDOLS_BY_ID = P_IDOLS.reduce(
   (acc, cur) => ({
     ...acc,
     [cur.id]: cur,

@@ -16,6 +16,9 @@
 
   .content {
     display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
     height: 720px;
     overflow: hidden;
     border-radius: 16px;

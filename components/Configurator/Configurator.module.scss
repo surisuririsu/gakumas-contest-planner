@@ -1,26 +1,10 @@
 .configurator {
-  padding: 48px;
+  padding: 32px;
   color: #333;
 
   display: flex;
   flex-direction: column;
   gap: 16px;
-
-  .idol {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-
-    .text {
-      flex: 1;
-    }
-
-    .name {
-      font-size: 24px;
-      font-weight: bold;
-    }
-  }
 
   .items {
     display: flex;
