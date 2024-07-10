@@ -2248,3 +2248,20 @@ export const CARDS_BY_ID = CARDS.reduce(
 export const MEMORABLE_CARDS = CARDS.filter(
   (card) => !["N", "N+", "T"].includes(card.rarity)
 );
+
+export const COST_BY_RARITY = {
+  SPSR: 96,
+  "SPSSR+": 126,
+  SPSSR: 96,
+  "SPSSSR+": 126,
+  BR: 30,
+  "BR+": 39,
+  R: 45,
+  "R+": 60,
+  BSR: 75,
+  "BSR+": 102,
+  SR: 105,
+  "SR+": 141,
+  SSR: 150,
+  "SSR+": 204,
+};

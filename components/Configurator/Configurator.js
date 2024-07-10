@@ -18,10 +18,14 @@ export default function Configurator() {
         <div className={styles.section}>
           <ItemList items={items} />
           {cardGroups.map((cards, index) => (
-            <CardList key={index} groupIndex={index} cards={cards} />
+            <CardList
+              key={`${index}:${cards.join("-")}`}
+              groupIndex={index}
+              cards={cards}
+            />
           ))}
         </div>
-        <div className={styles.section}>
+        <div className={`${styles.section} ${styles.banks}`}>
           <div className={styles.bankTabs}>
             <a
               className={activeBank === "CARD" ? styles.active : ""}

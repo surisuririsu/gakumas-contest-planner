@@ -9,10 +9,13 @@
 
   .section {
     min-width: 0;
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 16px;
+  }
+
+  .banks {
+    flex: 1;
   }
 
   .bankTabs {

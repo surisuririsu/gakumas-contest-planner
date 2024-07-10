@@ -32,19 +32,19 @@ export function IdolContextProvider({ children }) {
   );
 
   useEffect(() => {
-    router.replace(`/?${createQueryString("plan", plan)}`);
+    router.push(`/?${createQueryString("plan", plan)}`);
   }, [plan]);
 
   useEffect(() => {
-    router.replace(`/?${createQueryString("idol", idol)}`);
+    router.push(`/?${createQueryString("idol", idol)}`);
   }, [idol]);
 
   useEffect(() => {
-    router.replace(`/?${createQueryString("items", items.join("-"))}`);
+    router.push(`/?${createQueryString("items", items.join("-"))}`);
   }, [items]);
 
   useEffect(() => {
-    router.replace(
+    router.push(
       `/?${createQueryString(
         "cards",
         cardGroups.map((group) => group.join("-")).join("_")
@@ -68,6 +68,32 @@ export function IdolContextProvider({ children }) {
     });
   };
 
+  const insertCardGroup = (groupIndex) => {
+    setCardGroups((currentCards) => {
+      const newCards = [...currentCards];
+      newCards.splice(groupIndex, 0, [0, 0, 0, 0, 0, 0]);
+      return newCards;
+    });
+  };
+
+  const deleteCardGroup = (groupIndex) => {
+    setCardGroups((currentCards) => {
+      const newCards = [...currentCards];
+      newCards.splice(groupIndex, 1);
+      return newCards;
+    });
+  };
+
+  const swapCardGroups = (groupIndexA, groupIndexB) => {
+    setCardGroups((currentCards) => {
+      const newCards = [...currentCards];
+      const temp = newCards[groupIndexA];
+      newCards[groupIndexA] = newCards[groupIndexB];
+      newCards[groupIndexB] = temp;
+      return newCards;
+    });
+  };
+
   return (
     <IdolContext.Provider
       value={{
@@ -79,6 +105,9 @@ export function IdolContextProvider({ children }) {
         setIdol,
         changeItem,
         changeCard,
+        insertCardGroup,
+        deleteCardGroup,
+        swapCardGroups,
       }}
     >
       {children}
