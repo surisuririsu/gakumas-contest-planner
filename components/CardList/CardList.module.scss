@@ -1,5 +1,6 @@
 .list {
   display: flex;
+  align-items: center;
   gap: 6px;
 
   .card {
@@ -9,5 +10,48 @@
     border: 4px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
+  }
+}
+
+.sub {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .buttonGroup {
+    display: flex;
+    gap: 4px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    .buttonGroup {
+      opacity: 1;
+    }
+  }
+
+  button {
+    display: block;
+    border-radius: 20px;
+    padding: 4px;
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  .addButton {
+    border: 3px solid #4b3;
+  }
+
+  .moveButton {
+    border: 3px solid #aaf;
+  }
+
+  .deleteButton {
+    border: 3px solid #faa;
   }
 }
