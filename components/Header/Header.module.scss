@@ -1,0 +1,24 @@
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding-right: 5em;
+
+  .copyLinkButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4em;
+    height: 4em;
+    border: 0.25em solid #ccc;
+    border-radius: 2.25em;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 496px) {
+    margin: 1em 1em 0;
+  }
+}

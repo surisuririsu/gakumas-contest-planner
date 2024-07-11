@@ -94,6 +94,15 @@ export function IdolContextProvider({ children }) {
     });
   };
 
+  const writeUrlToClipboard = () => {
+    navigator.clipboard.writeText(
+      `https://gkcontest.ris.moe/?${createQueryString(
+        "items",
+        items.join("-")
+      )}`
+    );
+  };
+
   return (
     <IdolContext.Provider
       value={{
@@ -108,6 +117,7 @@ export function IdolContextProvider({ children }) {
         insertCardGroup,
         deleteCardGroup,
         swapCardGroups,
+        writeUrlToClipboard,
       }}
     >
       {children}

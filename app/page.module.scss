@@ -5,19 +5,6 @@
   justify-content: center;
   align-items: center;
 
-  .header {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-  }
-
-  hr {
-    min-height: 0.25em;
-    border: none;
-    border-radius: 0.125em;
-    background-color: #ccc;
-  }
-
   .content {
     display: flex;
     flex-direction: column;
@@ -29,26 +16,28 @@
     overflow: hidden;
     border-radius: 1em;
     background-color: #f6f6f6;
-  }
 
-  @media only screen and (max-width: 1072px) {
-    .content {
+    hr {
+      min-height: 0.25em;
+      border: none;
+      border-radius: 0.125em;
+      background-color: #ccc;
+    }
+
+    @media only screen and (max-width: 1072px) {
       height: 100dvh;
       width: 100dvh;
       border-radius: 0;
       font-size: 0.8rem;
     }
-  }
 
-  @media only screen and (max-width: 786px) {
-    .content {
+    @media only screen and (max-width: 786px) {
       overflow: auto;
     }
-  }
 
-  @media only screen and (max-width: 496px) {
-    .content {
-      font-size: 0.6rem;
+    @media only screen and (max-width: 496px) {
+      font-size: 0.65rem;
+      padding: 0;
     }
   }
 }

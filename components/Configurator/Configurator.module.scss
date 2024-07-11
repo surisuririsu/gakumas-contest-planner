@@ -24,11 +24,23 @@
     @extend .section;
     overflow: auto;
     padding: 0 0.5em;
+
+    @media only screen and (max-width: 496px) {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: #f6f6f6;
+      padding: 2em;
+    }
   }
 
   .banks {
     @extend .section;
     flex: 1;
+
+    @media only screen and (max-width: 496px) {
+      padding: 2em 4em;
+    }
   }
 
   .bankTabs {
