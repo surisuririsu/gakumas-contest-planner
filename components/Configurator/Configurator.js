@@ -8,11 +8,11 @@ import CardList from "@/components/CardList";
 import DefaultCards from "@/components/DefaultCards";
 import ItemBank from "@/components/ItemBank";
 import ItemList from "@/components/ItemList";
-import IdolContext from "@/contexts/IdolContext";
+import LoadoutContext from "@/contexts/LoadoutContext";
 import styles from "./Configurator.module.scss";
 
 export default function Configurator() {
-  const { items, cardGroups } = useContext(IdolContext);
+  const { items, cardGroups } = useContext(LoadoutContext);
   const [activeBank, setActiveBank] = useState("CARD");
   const isMobile =
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(

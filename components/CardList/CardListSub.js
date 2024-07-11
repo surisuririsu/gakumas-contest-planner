@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import IdolContext from "@/contexts/IdolContext";
+import LoadoutContext from "@/contexts/LoadoutContext";
 import { CARDS_BY_ID, COST_BY_RARITY } from "@/constants/cards";
 import styles from "./CardList.module.scss";
 
 export default function DeleteCardGroupButton({ groupIndex, cards }) {
   const { cardGroups, insertCardGroup, deleteCardGroup, swapCardGroups } =
-    useContext(IdolContext);
+    useContext(LoadoutContext);
   const cost = cards.reduce(
     (acc, cur) => acc + (COST_BY_RARITY[CARDS_BY_ID[cur]?.rarity] || 0),
     0

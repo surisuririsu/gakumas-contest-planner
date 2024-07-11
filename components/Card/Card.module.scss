@@ -1,0 +1,16 @@
+.card {
+  position: relative;
+  width: 5em;
+  height: 5em;
+  border: 0.25em solid #ccc;
+  border-radius: 0.5em;
+  overflow: hidden;
+
+  &.draggable {
+    cursor: grab;
+  }
+
+  &.selected {
+    box-shadow: 0 0 0.8em #02f;
+  }
+}

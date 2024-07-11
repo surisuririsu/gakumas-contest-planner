@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import Image from "next/image";
+import Card from "@/components/Card";
 import IdolContext from "@/contexts/IdolContext";
-import { CARDS_BY_ID, DEFAULT_CARDS_BY_PLAN } from "@/constants/cards";
+import { DEFAULT_CARDS_BY_PLAN } from "@/constants/cards";
 import styles from "./DefaultCards.module.scss";
 
 export default function DefaultCards() {
@@ -14,14 +14,12 @@ export default function DefaultCards() {
       {visible && (
         <div className={styles.list}>
           {defaultCards.map((cardId, index) => (
-            <div key={`${index}_${cardId}`} className={styles.card}>
-              <Image
-                src={`/cards/${CARDS_BY_ID[cardId].alias}.png`}
-                fill
-                alt=""
-                sizes="5em"
-              />
-            </div>
+            <Card
+              key={`${index}_${cardId}`}
+              cardId={cardId}
+              index={[-1, 0]}
+              fixed
+            />
           ))}
         </div>
       )}

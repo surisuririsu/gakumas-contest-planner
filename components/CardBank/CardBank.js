@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
 import IdolContext from "@/contexts/IdolContext";
+import LoadoutContext from "@/contexts/LoadoutContext";
 import { MEMORABLE_CARDS } from "@/constants/cards";
-import CardBankElement from "./CardBankElement";
+import Card from "@/components/Card";
 import styles from "./CardBank.module.scss";
 
 export default function CardBank() {
-  const { plan, idol, changeCard } = useContext(IdolContext);
+  const { plan, idol } = useContext(IdolContext);
+  const { changeCard } = useContext(LoadoutContext);
   const [focusedName, setFocusedName] = useState(" ");
   const [, drop] = useDrop(() => ({
     accept: "CARD",
@@ -28,10 +30,12 @@ export default function CardBank() {
       <div className={styles.bank} ref={drop}>
         <div className={styles.bankInner}>
           {filteredCards.map((card) => (
-            <CardBankElement
+            <Card
               key={card.id}
-              card={card}
-              setFocusedName={setFocusedName}
+              cardId={card.id}
+              index={[-1, 0]}
+              onMouseEnter={() => setFocusedName(card.name)}
+              onMouseLeave={() => setFocusedName(" ")}
             />
           ))}
         </div>

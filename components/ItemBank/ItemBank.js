@@ -1,12 +1,14 @@
 import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
+import Item from "@/components/Item";
 import IdolContext from "@/contexts/IdolContext";
+import LoadoutContext from "@/contexts/LoadoutContext";
 import { MEMORABLE_ITEMS } from "@/constants/items";
-import ItemBankElement from "./ItemBankElement";
 import styles from "./ItemBank.module.scss";
 
 export default function ItemBank() {
-  const { plan, idol, changeItem } = useContext(IdolContext);
+  const { plan, idol } = useContext(IdolContext);
+  const { changeItem } = useContext(LoadoutContext);
   const [focusedName, setFocusedName] = useState("");
   const [, drop] = useDrop(() => ({
     accept: "PITEM",
@@ -28,10 +30,12 @@ export default function ItemBank() {
       <div className={styles.bank} ref={drop}>
         <div className={styles.bankInner}>
           {filteredItems.map((item) => (
-            <ItemBankElement
+            <Item
               key={item.id}
-              item={item}
-              setFocusedName={setFocusedName}
+              itemId={item.id}
+              index={-1}
+              onMouseEnter={() => setFocusedName(item.name)}
+              onMouseLeave={() => setFocusedName("")}
             />
           ))}
         </div>

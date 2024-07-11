@@ -32,16 +32,14 @@ export default function Header() {
         selected={plan}
         onChange={setPlan}
       />
-      <div>
-        <IconSelect
-          options={IDOLS.map((alias) => ({
-            alias,
-            iconSrc: `/idols/${alias}.png`,
-          }))}
-          selected={idol}
-          onChange={setIdol}
-        />
-      </div>
+      <IconSelect
+        options={IDOLS.map((alias) => ({
+          alias,
+          iconSrc: `/idols/${alias}.png`,
+        }))}
+        selected={idol}
+        onChange={setIdol}
+      />
       <button
         className={styles.copyLinkButton}
         onClick={() => {

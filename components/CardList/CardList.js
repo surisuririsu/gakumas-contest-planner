@@ -1,4 +1,4 @@
-import CardListElement from "./CardListElement";
+import Card from "@/components/Card";
 import CardListSub from "./CardListSub";
 import styles from "./CardList.module.scss";
 
@@ -7,11 +7,10 @@ export default function CardList({ groupIndex, cards }) {
     <div>
       <div className={styles.list}>
         {cards.map((cardId, index) => (
-          <CardListElement
+          <Card
             key={`${index}_${cardId}`}
-            groupIndex={groupIndex}
-            index={index}
             cardId={cardId}
+            index={[groupIndex, index]}
           />
         ))}
       </div>

@@ -15,16 +15,6 @@
     grid-template-columns: repeat(auto-fill, 3.75em);
     grid-gap: 0.5em;
     justify-content: space-around;
-
-    .item {
-      position: relative;
-      width: 3.75em;
-      height: 3.75em;
-      border: 0.125em solid #ccc;
-      border-radius: 0.5em;
-      overflow: hidden;
-      cursor: grab;
-    }
   }
 }
 
