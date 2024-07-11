@@ -41,10 +41,6 @@ export function LoadoutContextProvider({ children }) {
     );
   }, [cardGroups]);
 
-  useEffect(() => {
-    console.log(selection);
-  }, [selection]);
-
   const changeItem = (index, itemId) => {
     setItems((currentItems) => {
       const newItems = [...currentItems];
