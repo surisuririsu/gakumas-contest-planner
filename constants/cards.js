@@ -2265,3 +2265,8 @@ export const COST_BY_RARITY = {
   SSR: 150,
   "SSR+": 204,
 };
+
+export const DEFAULT_CARDS_BY_PLAN = {
+  sense: [5, 7, 1, 1, 15, 15, 17, 17],
+  logic: [9, 11, 19, 19, 21, 21, 13, 13],
+};

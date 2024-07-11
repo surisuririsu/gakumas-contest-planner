@@ -1,0 +1,22 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(6, 5em);
+  grid-gap: 0.375em;
+  margin-bottom: 1em;
+
+  .card {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    border: 0.25em solid #ccc;
+    border-radius: 0.5em;
+    overflow: hidden;
+  }
+}
+
+.toggle {
+  display: block;
+  text-align: center;
+  color: #39c;
+  cursor: pointer;
+}

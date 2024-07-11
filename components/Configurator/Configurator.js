@@ -5,6 +5,7 @@ import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from "react-dnd-touch-backend";
 import CardBank from "@/components/CardBank";
 import CardList from "@/components/CardList";
+import DefaultCards from "@/components/DefaultCards";
 import ItemBank from "@/components/ItemBank";
 import ItemList from "@/components/ItemList";
 import IdolContext from "@/contexts/IdolContext";
@@ -30,6 +31,7 @@ export default function Configurator() {
               cards={cards}
             />
           ))}
+          <DefaultCards />
         </div>
         <div className={styles.banks}>
           <div className={styles.bankTabs}>

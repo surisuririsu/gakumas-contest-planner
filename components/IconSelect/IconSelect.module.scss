@@ -1,5 +1,4 @@
 .container {
-  align-self: flex-start;
   display: flex;
   flex-wrap: wrap;
   gap: 0.125em;
@@ -8,9 +7,6 @@
   border: 0.25em solid #ccc;
 
   .option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0.5em;
     border-radius: 1.75em;
     transition: all 0.3s;

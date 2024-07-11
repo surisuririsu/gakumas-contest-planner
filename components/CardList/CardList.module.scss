@@ -1,15 +1,12 @@
 .list {
-  display: flex;
-  align-items: center;
-  gap: 0.375em;
+  display: grid;
+  grid-template-columns: repeat(6, 5em);
+  grid-gap: 0.375em;
 
   .card {
     position: relative;
     width: 5em;
     height: 5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: 0.25em solid #ccc;
     border-radius: 0.5em;
     overflow: hidden;
@@ -41,7 +38,6 @@
   }
 
   button {
-    display: block;
     border-radius: 1.25em;
     padding: 0.25em;
     cursor: pointer;
@@ -52,7 +48,7 @@
   }
 
   .addButton {
-    border: 0.2em solid #4b3;
+    border: 0.2em solid #6c4;
   }
 
   .moveButton {
