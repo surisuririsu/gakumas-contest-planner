@@ -567,6 +567,22 @@ export const ITEMS = [
     plan: "logic",
     idol: "sumika",
   },
+  {
+    id: 101,
+    alias: "kimitowakeaunatsu",
+    name: "きみと分け合う夏",
+    rarity: "PSSR",
+    plan: "sense",
+    idol: "rinami",
+  },
+  {
+    id: 102,
+    alias: "kimitowakeaunatsu_plus",
+    name: "きみと分け合う夏+",
+    rarity: "PSSR+",
+    plan: "sense",
+    idol: "rinami",
+  },
 
   // SPSSR
 
@@ -711,6 +727,13 @@ export const ITEMS = [
     id: 52,
     alias: "sakiosusumemat",
     name: "咲季オススメマット",
+    rarity: "NSR",
+    plan: "logic",
+  },
+  {
+    id: 103,
+    alias: "kawaiikakushibathtowel",
+    name: "可愛い隠しバスタオル",
     rarity: "NSR",
     plan: "logic",
   },
