@@ -8,13 +8,16 @@ import styles from "./CardBank.module.scss";
 
 export default function CardBank() {
   const { plan, idol } = useContext(IdolContext);
-  const { changeCard } = useContext(LoadoutContext);
+  const { changeCard, changeItem } = useContext(LoadoutContext);
   const [focusedName, setFocusedName] = useState(" ");
   const [, drop] = useDrop(() => ({
-    accept: "CARD",
+    accept: ["CARD", "PITEM"],
     drop: (item) => {
-      if (item.fromIndex[0] != -1) {
+      if (item.type == "CARD" && item.fromIndex[0] != -1) {
         changeCard(item.fromIndex, 0);
+      }
+      if (item.type == "PITEM" && item.fromIndex != -1) {
+        changeItem(item.fromIndex, 0);
       }
     },
   }));
