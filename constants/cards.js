@@ -2437,9 +2437,9 @@ export const MEMORABLE_CARDS = CARDS.filter(
 
 export const COST_BY_RARITY = {
   SPSR: 96,
-  "SPSSR+": 126,
+  "SPSR+": 126,
   SPSSR: 96,
-  "SPSSSR+": 126,
+  "SPSSR+": 126,
   BR: 30,
   "BR+": 39,
   R: 45,
