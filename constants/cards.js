@@ -1622,14 +1622,14 @@ export const CARDS = [
   {
     id: 130,
     alias: "shizukanaishi",
-    name: "静かな意思",
+    name: "静かな意志",
     rarity: "SR",
     plan: "sense",
   },
   {
     id: 131,
     alias: "shizukanaishi_plus",
-    name: "静かな意思+",
+    name: "静かな意志+",
     rarity: "SR+",
     plan: "sense",
   },
