@@ -21,7 +21,7 @@ export default function Simulator() {
   if (!visible) {
     return (
       <a className={styles.link} onClick={() => setVisible(true)}>
-        Simulator
+        Simulator (by かふぇもっと)
       </a>
     );
   }
