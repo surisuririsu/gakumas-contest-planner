@@ -2271,7 +2271,7 @@ export const CARDS = [
   {
     id: 306,
     alias: "anotokinoyakusoku",
-    name: "あのとくの約束",
+    name: "あのときの約束",
     rarity: "SSR",
     plan: "logic",
     unique: true,
@@ -2279,7 +2279,7 @@ export const CARDS = [
   {
     id: 307,
     alias: "anotokinoyakusoku_plus",
-    name: "あのとくの約束+",
+    name: "あのときの約束+",
     rarity: "SSR+",
     plan: "logic",
     unique: true,
@@ -2448,7 +2448,7 @@ export const CARDS_BY_ID = CARDS.reduce(
     ...acc,
     [cur.id]: {
       ...cur,
-      simulatorId: SIMULATOR_CARD_IDS_BY_NAME[cur.name],
+      simulatorId: SIMULATOR_CARD_IDS_BY_NAME[cur.name] || -1,
       simulatorPIdolId:
         SIMULATOR_IDOL_IDS_BY_SIMULATOR_CARD_ID[
           2 * Math.floor(SIMULATOR_CARD_IDS_BY_NAME[cur.name] / 2)
@@ -2483,3 +2483,7 @@ export const DEFAULT_CARDS_BY_PLAN = {
   sense: [5, 7, 1, 1, 15, 15, 17, 17],
   logic: [9, 11, 19, 19, 21, 21, 13, 13],
 };
+
+// console.log(
+//   Object.values(CARDS_BY_ID).filter((card) => card.simulatorId === -1)
+// );

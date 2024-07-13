@@ -813,3 +813,5 @@ export const ITEMS_BY_ID = ITEMS.reduce(
 export const MEMORABLE_ITEMS = ITEMS.filter(
   (item) => !["NSR", "NSSR"].includes(item.rarity)
 );
+
+// console.log(ITEMS.filter((item) => item.simulatorId === -1));
