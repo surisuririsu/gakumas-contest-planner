@@ -6,6 +6,7 @@ import { TouchBackend } from "react-dnd-touch-backend";
 import CardBank from "@/components/CardBank";
 import CardList from "@/components/CardList";
 import DefaultCards from "@/components/DefaultCards";
+import ContestStageSelect from "@/components/ContestStageSelect";
 import ItemBank from "@/components/ItemBank";
 import ItemList from "@/components/ItemList";
 import LoadoutContext from "@/contexts/LoadoutContext";
@@ -32,6 +33,7 @@ export default function Configurator() {
             />
           ))}
           <DefaultCards />
+          <ContestStageSelect />
         </div>
         <div className={styles.banks}>
           <div className={styles.bankTabs}>

@@ -1,3 +1,21 @@
+import { PIdolData } from "gakumas_contest_simulator/scripts/simulator/data/pIdolData";
+import { SkillCardData } from "gakumas_contest_simulator/scripts/simulator/data/skillCardData";
+
+const SIMULATOR_IDOL_IDS_BY_SIMULATOR_CARD_ID = PIdolData.getAll().reduce(
+  (acc, cur) => ({
+    ...acc,
+    [cur.unique_skillCard_id]: cur.id,
+  }),
+  {}
+);
+const SIMULATOR_CARD_IDS_BY_NAME = SkillCardData.getAll().reduce(
+  (acc, cur) => ({
+    ...acc,
+    [cur.name]: cur.id,
+  }),
+  {}
+);
+
 export const CARDS = [
   // PR, PR+
 
@@ -2428,7 +2446,14 @@ export const CARDS = [
 export const CARDS_BY_ID = CARDS.reduce(
   (acc, cur) => ({
     ...acc,
-    [cur.id]: cur,
+    [cur.id]: {
+      ...cur,
+      simulatorId: SIMULATOR_CARD_IDS_BY_NAME[cur.name],
+      simulatorPIdolId:
+        SIMULATOR_IDOL_IDS_BY_SIMULATOR_CARD_ID[
+          2 * Math.floor(SIMULATOR_CARD_IDS_BY_NAME[cur.name] / 2)
+        ] || -1,
+    },
   }),
   {}
 );
