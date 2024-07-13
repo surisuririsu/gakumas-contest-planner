@@ -2253,7 +2253,7 @@ export const CARDS = [
   {
     id: 306,
     alias: "anotokinoyakusoku",
-    name: "あのとくの約束",
+    name: "あのときの約束",
     rarity: "SSR",
     plan: "logic",
     unique: true,
@@ -2261,7 +2261,7 @@ export const CARDS = [
   {
     id: 307,
     alias: "anotokinoyakusoku_plus",
-    name: "あのとくの約束+",
+    name: "あのときの約束+",
     rarity: "SSR+",
     plan: "logic",
     unique: true,
