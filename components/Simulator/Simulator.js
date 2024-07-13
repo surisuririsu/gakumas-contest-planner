@@ -35,16 +35,19 @@ export default function Simulator() {
 
   const itemSimulatorIds = items
     .map((iid) => ITEMS_BY_ID[iid])
-    .filter((i) => !i?.idol)
-    .map((i) => i?.simulatorId || -1);
+    .filter((i) => i && !i.idol)
+    .map((i) => i.simulatorId || -1);
 
   const cardSimulatorIds = cardGroups
     .slice(0, 2)
     .map((cg, idx) =>
       [(idx ? subIdolCard : mainIdolCard)?.simulatorId].concat(
         cg
-          .filter((cid) => !CARDS_BY_ID[cid]?.rarity?.startsWith("P"))
-          .map((cid) => CARDS_BY_ID[cid]?.simulatorId || -1)
+          .filter(
+            (cid) =>
+              CARDS_BY_ID[cid] && !CARDS_BY_ID[cid].rarity?.startsWith("P")
+          )
+          .map((cid) => CARDS_BY_ID[cid].simulatorId || -1)
       )
     );
 
