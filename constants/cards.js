@@ -643,6 +643,7 @@ export const CARDS = [
     name: "入道雲と、きみ",
     rarity: "PSSR",
     plan: "sense",
+    idol: "rinami",
     unique: true,
   },
   {
@@ -651,6 +652,7 @@ export const CARDS = [
     name: "入道雲と、きみ+",
     rarity: "PSSR+",
     plan: "sense",
+    idol: "rinami",
     unique: true,
   },
 
