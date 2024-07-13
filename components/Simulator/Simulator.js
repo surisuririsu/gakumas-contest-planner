@@ -74,6 +74,14 @@ export default function Simulator() {
           {selectedStage ? (
             <>
               Stage: {selectedStage.name}
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={`/plans/${selectedStage.plan}.png`}
+                  fill
+                  alt=""
+                  sizes="1.5em"
+                />
+              </div>
               <div className={styles.status}>
                 {Object.values(selectedStage.criteria).map((c, i) => (
                   <div key={i} style={{ flex: c }}></div>
