@@ -4,9 +4,9 @@ import LoadoutContext from "@/contexts/LoadoutContext";
 import { CONTEST_STAGES } from "@/constants/contestStages";
 import { ITEMS_BY_ID } from "@/constants/items";
 import { CARDS_BY_ID } from "@/constants/cards";
-import styles from "./ContestStageSelect.module.scss";
+import styles from "./Simulator.module.scss";
 
-export default function ContestStageSelect() {
+export default function Simulator() {
   const { items, cardGroups } = useContext(LoadoutContext);
   const [visible, setVisible] = useState(false);
   const [stage, setStage] = useState(null);
