@@ -622,7 +622,7 @@ export const CARDS = [
   {
     id: 262,
     alias: "pow",
-    name: "POW！",
+    name: "ＰＯＷ！",
     rarity: "PSSR",
     plan: "logic",
     idol: "saki",
@@ -631,7 +631,7 @@ export const CARDS = [
   {
     id: 263,
     alias: "pow_plus",
-    name: "POW！+",
+    name: "ＰＯＷ！+",
     rarity: "PSSR+",
     plan: "logic",
     idol: "saki",
@@ -1959,7 +1959,7 @@ export const CARDS = [
   {
     id: 202,
     alias: "200percentsmile",
-    name: "200％スマイル",
+    name: "２００％スマイル",
     rarity: "SSR",
     plan: "logic",
     unique: true,
@@ -1967,7 +1967,7 @@ export const CARDS = [
   {
     id: 203,
     alias: "200percentsmile_plus",
-    name: "200％スマイル+",
+    name: "２００％スマイル+",
     rarity: "SSR+",
     plan: "logic",
     unique: true,
@@ -2484,6 +2484,9 @@ export const DEFAULT_CARDS_BY_PLAN = {
   logic: [9, 11, 19, 19, 21, 21, 13, 13],
 };
 
-// console.log(
-//   Object.values(CARDS_BY_ID).filter((card) => card.simulatorId === -1)
-// );
+const MISMATCHED_CARDS = Object.values(CARDS_BY_ID).filter(
+  (card) => card.simulatorId === -1
+);
+if (MISMATCHED_CARDS) {
+  console.log("Mismatched cards", MISMATCHED_CARDS);
+}

@@ -814,4 +814,5 @@ export const MEMORABLE_ITEMS = ITEMS.filter(
   (item) => !["NSR", "NSSR"].includes(item.rarity)
 );
 
-// console.log(ITEMS.filter((item) => item.simulatorId === -1));
+const MISMATCHED_ITEMS = ITEMS.filter((item) => item.simulatorId === -1);
+if (MISMATCHED_ITEMS) console.log("Mismatched items", MISMATCHED_ITEMS);
