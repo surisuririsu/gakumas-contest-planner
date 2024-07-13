@@ -343,7 +343,7 @@ export const CARDS = [
     name: "いっしょけんめい+",
     rarity: "PSR+",
     plan: "logic",
-    idol: "ume",
+    idol: "china",
     unique: true,
   },
   {
