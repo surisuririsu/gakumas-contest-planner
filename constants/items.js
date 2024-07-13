@@ -378,7 +378,7 @@ export const ITEMS = [
   {
     id: 65,
     alias: "toushindainoladylip",
-    name: "等身大レディリップ",
+    name: "等身大のレディリップ",
     rarity: "PSSR",
     plan: "sense",
     idol: "rinami",
@@ -386,7 +386,7 @@ export const ITEMS = [
   {
     id: 66,
     alias: "toushindainoladylip_plus",
-    name: "等身大レディリップ+",
+    name: "等身大のレディリップ+",
     rarity: "PSSR+",
     plan: "sense",
     idol: "rinami",
