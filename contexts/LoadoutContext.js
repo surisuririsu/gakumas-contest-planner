@@ -7,7 +7,7 @@ export function LoadoutContextProvider({ children }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialItems = searchParams.get("items") || "0-0-0-0";
-  const initialCards = searchParams.get("cards") || "0-0-0-0-0-0";
+  const initialCards = searchParams.get("cards") || "0-0-0-0-0-0_0-0-0-0-0-0";
 
   const [items, setItems] = useState(
     initialItems.split("-").map((n) => parseInt(n, 10))

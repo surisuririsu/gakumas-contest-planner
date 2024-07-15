@@ -1584,7 +1584,7 @@ __metadata:
   dependencies:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.4"
-    gakumas_contest_simulator: "https://github.com/surisuririsu/gakumas_contest_simulator.git#planner-integration-2"
+    gakumas_contest_simulator: "https://github.com/katabami83/gakumas_contest_simulator.git"
     next: "npm:14.2.4"
     react: "npm:^18"
     react-dnd: "npm:^16.0.1"
@@ -1595,10 +1595,10 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gakumas_contest_simulator@https://github.com/surisuririsu/gakumas_contest_simulator.git#planner-integration-2":
+"gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0
-  resolution: "gakumas_contest_simulator@https://github.com/surisuririsu/gakumas_contest_simulator.git#commit=35576098576ac7eefe9d695d270ec0d82563ed8d"
-  checksum: 10/86cd4d77cd2a8bda2ad5478c6714564b46666600259be073807c29dbf8ac830207fca10bf0a0313765c269f56b87ca9c71f311bd906452086977de9633db9975
+  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"
+  checksum: 10/903da63f23989669fdff0d5580e71150b9db3258079d4b9fee60ededdd46d072c14f0c30ae815425b9573cb43467a8504cb5be0d2aaa3a7f72de7beb74874f40
   languageName: node
   linkType: hard
 

@@ -6,6 +6,9 @@ import { ITEMS_BY_ID } from "@/constants/items";
 import { CARDS_BY_ID } from "@/constants/cards";
 import styles from "./Simulator.module.scss";
 
+const SIMULATOR_URL_BASE =
+  "https://katabami83.github.io/gakumas_contest_simulator";
+
 export default function Simulator() {
   const { items, cardGroups } = useContext(LoadoutContext);
   const [visible, setVisible] = useState(false);
@@ -65,7 +68,7 @@ export default function Simulator() {
     "cards",
     cardSimulatorIds.map((cg) => cg.join(":")).join("_")
   );
-  const simulatorUrl = `http://localhost:8000/?${simulatorParams.toString()}`;
+  const simulatorUrl = `${SIMULATOR_URL_BASE}/?${simulatorParams.toString()}`;
 
   return (
     <>

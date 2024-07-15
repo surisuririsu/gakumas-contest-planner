@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas_contest_simulator", "https://github.com/surisuririsu/gakumas_contest_simulator.git#commit=35576098576ac7eefe9d695d270ec0d82563ed8d"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -2011,7 +2011,7 @@ const RAW_RUNTIME_STATE =
           ["gakumas-contest-planner", "workspace:."],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas_contest_simulator", "https://github.com/surisuririsu/gakumas_contest_simulator.git#commit=35576098576ac7eefe9d695d270ec0d82563ed8d"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -2024,10 +2024,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gakumas_contest_simulator", [\
-      ["https://github.com/surisuririsu/gakumas_contest_simulator.git#commit=35576098576ac7eefe9d695d270ec0d82563ed8d", {\
-        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-f5ddc558d5-86cd4d77cd.zip/node_modules/gakumas_contest_simulator/",\
+      ["https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99", {\
+        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-1ec461ea51-903da63f23.zip/node_modules/gakumas_contest_simulator/",\
         "packageDependencies": [\
-          ["gakumas_contest_simulator", "https://github.com/surisuririsu/gakumas_contest_simulator.git#commit=35576098576ac7eefe9d695d270ec0d82563ed8d"]\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"]\
         ],\
         "linkType": "HARD"\
       }]\
