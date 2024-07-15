@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gakumas_contest_simulator": "https://github.com/katabami83/gakumas_contest_simulator.git",
     "next": "14.2.4",
     "react": "^18",
     "react-dnd": "^16.0.1",

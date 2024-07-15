@@ -1,0 +1,66 @@
+.link {
+  display: block;
+  text-align: center;
+  color: #39c;
+  cursor: pointer;
+}
+
+.select {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  background: #eee;
+  border: 0.25em solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+
+  .placeholder {
+    flex: 1;
+    color: #39c;
+  }
+
+  button {
+    font-size: 1em;
+    background: none;
+    border: none;
+    padding: 0.5em;
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+    cursor: pointer;
+
+    .imageWrapper {
+      position: relative;
+      width: 1.5em;
+      height: 1.5em;
+    }
+
+    .status {
+      flex: 1;
+      display: flex;
+
+      div:nth-child(1) {
+        background-color: #f23584;
+      }
+      div:nth-child(2) {
+        background-color: #1c85ed;
+      }
+      div:nth-child(3) {
+        background-color: #f7b12e;
+      }
+    }
+  }
+}
+
+.statusInputs {
+  display: flex;
+  gap: 0.5em;
+
+  input {
+    width: 0;
+    flex: 1;
+    padding: 0.25em;
+    border: 0.25em solid #ccc;
+    border-radius: 0.25em;
+  }
+}

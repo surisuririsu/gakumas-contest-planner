@@ -8,6 +8,7 @@ import CardList from "@/components/CardList";
 import DefaultCards from "@/components/DefaultCards";
 import ItemBank from "@/components/ItemBank";
 import ItemList from "@/components/ItemList";
+import Simulator from "@/components/Simulator";
 import LoadoutContext from "@/contexts/LoadoutContext";
 import styles from "./Configurator.module.scss";
 
@@ -32,6 +33,7 @@ export default function Configurator() {
             />
           ))}
           <DefaultCards />
+          <Simulator />
         </div>
         <div className={styles.banks}>
           <div className={styles.bankTabs}>

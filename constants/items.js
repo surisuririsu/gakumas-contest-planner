@@ -1,3 +1,13 @@
+import { PItemData } from "gakumas_contest_simulator/scripts/simulator/data/pItemData";
+
+const SIMULATOR_ITEM_IDS_BY_NAME = PItemData.getAll().reduce(
+  (acc, cur) => ({
+    ...acc,
+    [cur.name]: cur.id,
+  }),
+  {}
+);
+
 export const ITEMS = [
   // PR, PR+
 
@@ -788,6 +798,10 @@ export const ITEMS = [
   },
 ];
 
+ITEMS.forEach((item) => {
+  item.simulatorId = SIMULATOR_ITEM_IDS_BY_NAME[item.name] || -1;
+});
+
 export const ITEMS_BY_ID = ITEMS.reduce(
   (acc, cur) => ({
     ...acc,
@@ -799,3 +813,6 @@ export const ITEMS_BY_ID = ITEMS.reduce(
 export const MEMORABLE_ITEMS = ITEMS.filter(
   (item) => !["NSR", "NSSR"].includes(item.rarity)
 );
+
+const MISMATCHED_ITEMS = ITEMS.filter((item) => item.simulatorId === -1);
+if (MISMATCHED_ITEMS) console.log("Mismatched items", MISMATCHED_ITEMS);

@@ -1,3 +1,21 @@
+import { PIdolData } from "gakumas_contest_simulator/scripts/simulator/data/pIdolData";
+import { SkillCardData } from "gakumas_contest_simulator/scripts/simulator/data/skillCardData";
+
+const SIMULATOR_IDOL_IDS_BY_SIMULATOR_CARD_ID = PIdolData.getAll().reduce(
+  (acc, cur) => ({
+    ...acc,
+    [cur.unique_skillCard_id]: cur.id,
+  }),
+  {}
+);
+const SIMULATOR_CARD_IDS_BY_NAME = SkillCardData.getAll().reduce(
+  (acc, cur) => ({
+    ...acc,
+    [cur.name]: cur.id,
+  }),
+  {}
+);
+
 export const CARDS = [
   // PR, PR+
 
@@ -604,7 +622,7 @@ export const CARDS = [
   {
     id: 262,
     alias: "pow",
-    name: "POW！",
+    name: "ＰＯＷ！",
     rarity: "PSSR",
     plan: "logic",
     idol: "saki",
@@ -613,7 +631,7 @@ export const CARDS = [
   {
     id: 263,
     alias: "pow_plus",
-    name: "POW！+",
+    name: "ＰＯＷ！+",
     rarity: "PSSR+",
     plan: "logic",
     idol: "saki",
@@ -1941,7 +1959,7 @@ export const CARDS = [
   {
     id: 202,
     alias: "200percentsmile",
-    name: "200％スマイル",
+    name: "２００％スマイル",
     rarity: "SSR",
     plan: "logic",
     unique: true,
@@ -1949,7 +1967,7 @@ export const CARDS = [
   {
     id: 203,
     alias: "200percentsmile_plus",
-    name: "200％スマイル+",
+    name: "２００％スマイル+",
     rarity: "SSR+",
     plan: "logic",
     unique: true,
@@ -2428,7 +2446,14 @@ export const CARDS = [
 export const CARDS_BY_ID = CARDS.reduce(
   (acc, cur) => ({
     ...acc,
-    [cur.id]: cur,
+    [cur.id]: {
+      ...cur,
+      simulatorId: SIMULATOR_CARD_IDS_BY_NAME[cur.name] || -1,
+      simulatorPIdolId:
+        SIMULATOR_IDOL_IDS_BY_SIMULATOR_CARD_ID[
+          2 * Math.floor(SIMULATOR_CARD_IDS_BY_NAME[cur.name] / 2)
+        ] || -1,
+    },
   }),
   {}
 );
@@ -2458,3 +2483,10 @@ export const DEFAULT_CARDS_BY_PLAN = {
   sense: [5, 7, 1, 1, 15, 15, 17, 17],
   logic: [9, 11, 19, 19, 21, 21, 13, 13],
 };
+
+const MISMATCHED_CARDS = Object.values(CARDS_BY_ID).filter(
+  (card) => card.simulatorId === -1
+);
+if (MISMATCHED_CARDS) {
+  console.log("Mismatched cards", MISMATCHED_CARDS);
+}
