@@ -1,22 +1,32 @@
 import { createContext, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
+import {
+  LEGACY_IDOL_MAP,
+  LEGACY_ITEM_MAP,
+  LEGACY_CARD_MAP,
+} from "@/utils/legacy";
 
 const LoadoutContext = createContext();
 
 export function LoadoutContextProvider({ children }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const initialItems = searchParams.get("items") || "0-0-0-0";
-  const initialCards = searchParams.get("cards") || "0-0-0-0-0-0_0-0-0-0-0-0";
+  const isLegacy = LEGACY_IDOL_MAP[searchParams.get("idol")];
+  let initialItems = searchParams.get("items") || "0-0-0-0";
+  let initialCards = searchParams.get("cards") || "0-0-0-0-0-0_0-0-0-0-0-0";
+  initialItems = initialItems.split("-").map((n) => parseInt(n, 10));
+  initialCards = initialCards
+    .split("_")
+    .map((group) => group.split("-").map((n) => parseInt(n, 10)));
+  if (isLegacy) {
+    initialItems = initialItems.map((item) => LEGACY_ITEM_MAP[item] || item);
+    initialCards = initialCards.map((group) =>
+      group.map((card) => LEGACY_CARD_MAP[card] || card)
+    );
+  }
 
-  const [items, setItems] = useState(
-    initialItems.split("-").map((n) => parseInt(n, 10))
-  );
-  const [cardGroups, setCardGroups] = useState(
-    initialCards
-      .split("_")
-      .map((group) => group.split("-").map((n) => parseInt(n, 10)))
-  );
+  const [items, setItems] = useState(initialItems);
+  const [cardGroups, setCardGroups] = useState(initialCards);
   const [selection, setSelection] = useState(null);
 
   const createQueryString = useCallback(
