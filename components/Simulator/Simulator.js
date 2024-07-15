@@ -1,14 +1,9 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { PItems } from "gakumas-data";
 import LoadoutContext from "@/contexts/LoadoutContext";
 import { CONTEST_STAGES } from "@/constants/contestStages";
-import { CARDS_BY_ID } from "@/constants/cards";
-import { SIMULATOR_ITEM_MAP } from "@/utils/simulator";
+import { generateSimulatorUrl } from "@/utils/simulator";
 import styles from "./Simulator.module.scss";
-
-const SIMULATOR_URL_BASE =
-  "https://katabami83.github.io/gakumas_contest_simulator";
 
 export default function Simulator() {
   const { items, cardGroups } = useContext(LoadoutContext);
@@ -30,45 +25,12 @@ export default function Simulator() {
     );
   }
 
-  const mainIdolCard = cardGroups[0]
-    .map((cid) => CARDS_BY_ID[cid])
-    .find((c) => c?.rarity?.startsWith("P"));
-  const subIdolCard = cardGroups[1]
-    .map((cid) => CARDS_BY_ID[cid])
-    .find((c) => c?.rarity?.startsWith("P"));
-
-  const itemSimulatorIds = items
-    .filter((i) => PItems.getById(i) && PItems.getById(i).sourceType != "pIdol")
-    .map((i) => SIMULATOR_ITEM_MAP[i] || -1);
-
-  const cardSimulatorIds = cardGroups
-    .slice(0, 2)
-    .map((cg, idx) =>
-      [(idx ? subIdolCard : mainIdolCard)?.simulatorId].concat(
-        cg
-          .filter(
-            (cid) =>
-              CARDS_BY_ID[cid] && !CARDS_BY_ID[cid].rarity?.startsWith("P")
-          )
-          .map((cid) => CARDS_BY_ID[cid].simulatorId || -1)
-      )
-    );
-
-  const simulatorParams = new URLSearchParams();
-  simulatorParams.set("contest_stage", stage);
-  simulatorParams.set(
-    "p_idol",
-    `${mainIdolCard?.simulatorPIdolId || -1}:${
-      subIdolCard?.simulatorPIdolId || -1
-    }`
-  );
-  simulatorParams.set("status", [vocal, dance, visual, hp].join(":"));
-  simulatorParams.set("p_items", itemSimulatorIds.join(":"));
-  simulatorParams.set(
-    "cards",
-    cardSimulatorIds.map((cg) => cg.join(":")).join("_")
-  );
-  const simulatorUrl = `${SIMULATOR_URL_BASE}/?${simulatorParams.toString()}`;
+  const simulatorUrl = generateSimulatorUrl(items, cardGroups, stage, [
+    vocal,
+    dance,
+    visual,
+    hp,
+  ]);
 
   return (
     <>

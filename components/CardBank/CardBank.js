@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
+import { PIdols, SkillCards } from "gakumas-data";
 import IdolContext from "@/contexts/IdolContext";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { MEMORABLE_CARDS } from "@/constants/cards";
 import Card from "@/components/Card";
 import styles from "./CardBank.module.scss";
 
@@ -22,17 +22,24 @@ export default function CardBank() {
     },
   }));
 
-  const filteredCards = MEMORABLE_CARDS.filter((card) => {
-    if (card.plan && card.plan != plan) return false;
-    if (card.idol && card.idol != idol) return false;
-    return true;
+  const filteredPIdols = PIdols.getFiltered({
+    idolIds: [idol],
+    plans: [plan],
+  });
+  const signatureCards = SkillCards.getFiltered({
+    pIdolIds: filteredPIdols.map((pi) => pi.id),
+  });
+  const nonSignatureCards = SkillCards.getFiltered({
+    rarities: ["R", "SR", "SSR"],
+    plans: [plan, "free"],
+    sourceTypes: ["produce", "support"],
   });
 
   return (
     <>
       <div className={styles.bank} ref={drop}>
         <div className={styles.bankInner}>
-          {filteredCards.map((card) => (
+          {signatureCards.concat(nonSignatureCards).map((card) => (
             <Card
               key={card.id}
               cardId={card.id}

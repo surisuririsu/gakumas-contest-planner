@@ -7,7 +7,7 @@ export function IdolContextProvider({ children }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const initialPlan = searchParams.get("plan");
-  const initialIdol = searchParams.get("idol");
+  const initialIdol = parseInt(searchParams.get("idol"), 10);
 
   const [plan, setPlan] = useState(initialPlan || "sense");
   const [idol, setIdol] = useState(initialIdol || 1);

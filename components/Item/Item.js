@@ -55,7 +55,7 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
         onClick={handleClick}
       >
         <Image
-          src={pItem?.icon || "/items/placeholder.png"}
+          src={pItem?.icon || "/icon_placeholder.png"}
           fill
           alt={pItem?.name || ""}
           onMouseEnter={onMouseEnter}

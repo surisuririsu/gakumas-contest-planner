@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import Image from "next/image";
 import { useDrag, useDrop } from "react-dnd";
+import { SkillCards } from "gakumas-data";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { CARDS_BY_ID } from "@/constants/cards";
 import styles from "./Card.module.scss";
 
 export default function Card({
@@ -13,7 +13,7 @@ export default function Card({
   onMouseLeave,
 }) {
   const { selection, setSelection, changeCard } = useContext(LoadoutContext);
-  const card = CARDS_BY_ID[cardId];
+  const card = SkillCards.getById(cardId);
   const isBank = index[0] === -1;
   const selected =
     selection &&
@@ -62,7 +62,7 @@ export default function Card({
         onClick={fixed ? null : handleClick}
       >
         <Image
-          src={`/cards/${card?.alias || "placeholder"}.png`}
+          src={card?.icon || "/icon_placeholder.png"}
           fill
           alt={card?.name || ""}
           onMouseEnter={onMouseEnter}
