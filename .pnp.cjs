@@ -29,7 +29,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas-data", "file:../gakumas-data#../gakumas-data::hash=a0d13e&locator=gakumas-contest-planner%40workspace%3A."],\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=1518773e45e3cc21f032f4f7964217089e4a6b10"],\
           ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
@@ -2012,7 +2012,7 @@ const RAW_RUNTIME_STATE =
           ["gakumas-contest-planner", "workspace:."],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas-data", "file:../gakumas-data#../gakumas-data::hash=a0d13e&locator=gakumas-contest-planner%40workspace%3A."],\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=1518773e45e3cc21f032f4f7964217089e4a6b10"],\
           ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=83dc2d48a26eaa6ca0891f82e2d00fd774fbed99"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
@@ -2026,10 +2026,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gakumas-data", [\
-      ["file:../gakumas-data#../gakumas-data::hash=a0d13e&locator=gakumas-contest-planner%40workspace%3A.", {\
-        "packageLocation": "./.yarn/cache/gakumas-data-file-fe6160ce9a-8349cbb75f.zip/node_modules/gakumas-data/",\
+      ["https://github.com/surisuririsu/gakumas-data.git#commit=1518773e45e3cc21f032f4f7964217089e4a6b10", {\
+        "packageLocation": "./.yarn/cache/gakumas-data-https-01faaa7c34-be63a617d3.zip/node_modules/gakumas-data/",\
         "packageDependencies": [\
-          ["gakumas-data", "file:../gakumas-data#../gakumas-data::hash=a0d13e&locator=gakumas-contest-planner%40workspace%3A."]\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=1518773e45e3cc21f032f4f7964217089e4a6b10"]\
         ],\
         "linkType": "HARD"\
       }]\

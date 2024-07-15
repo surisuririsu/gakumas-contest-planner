@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "gakumas-data": "../gakumas-data",
+    "gakumas-data": "https://github.com/surisuririsu/gakumas-data.git",
     "gakumas_contest_simulator": "https://github.com/katabami83/gakumas_contest_simulator.git",
     "next": "14.2.4",
     "react": "^18",
