@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
+import { PItems } from "gakumas-data";
 import LoadoutContext from "@/contexts/LoadoutContext";
 import { CONTEST_STAGES } from "@/constants/contestStages";
-import { ITEMS_BY_ID } from "@/constants/items";
 import { CARDS_BY_ID } from "@/constants/cards";
+import { SIMULATOR_ITEM_MAP } from "@/utils/simulator";
 import styles from "./Simulator.module.scss";
 
 const SIMULATOR_URL_BASE =
@@ -37,9 +38,8 @@ export default function Simulator() {
     .find((c) => c?.rarity?.startsWith("P"));
 
   const itemSimulatorIds = items
-    .map((iid) => ITEMS_BY_ID[iid])
-    .filter((i) => i && !i.idol)
-    .map((i) => i.simulatorId || -1);
+    .filter((i) => PItems.getById(i) && PItems.getById(i).sourceType != "pIdol")
+    .map((i) => SIMULATOR_ITEM_MAP[i] || -1);
 
   const cardSimulatorIds = cardGroups
     .slice(0, 2)

@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import Image from "next/image";
 import { useDrag, useDrop } from "react-dnd";
+import { PItems } from "gakumas-data";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { ITEMS_BY_ID } from "@/constants/items";
 import styles from "./Item.module.scss";
 
 export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
   const { selection, setSelection, changeItem } = useContext(LoadoutContext);
-  const pItem = ITEMS_BY_ID[itemId];
+  const pItem = PItems.getById(itemId);
   const isBank = index === -1;
   const selected =
     selection &&
@@ -55,7 +55,7 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
         onClick={handleClick}
       >
         <Image
-          src={`/items/${pItem?.alias || "placeholder"}.png`}
+          src={pItem?.icon || "/items/placeholder.png"}
           fill
           alt={pItem?.name || ""}
           onMouseEnter={onMouseEnter}

@@ -10,7 +10,7 @@ export function IdolContextProvider({ children }) {
   const initialIdol = searchParams.get("idol");
 
   const [plan, setPlan] = useState(initialPlan || "sense");
-  const [idol, setIdol] = useState(initialIdol || "saki");
+  const [idol, setIdol] = useState(initialIdol || 1);
 
   const createQueryString = useCallback(
     (name, value) => {

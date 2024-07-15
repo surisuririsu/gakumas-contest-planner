@@ -1584,6 +1584,7 @@ __metadata:
   dependencies:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.4"
+    gakumas-data: ../gakumas-data
     gakumas_contest_simulator: "https://github.com/katabami83/gakumas_contest_simulator.git"
     next: "npm:14.2.4"
     react: "npm:^18"
@@ -1594,6 +1595,13 @@ __metadata:
     sass: "npm:^1.77.6"
   languageName: unknown
   linkType: soft
+
+"gakumas-data@file:../gakumas-data::locator=gakumas-contest-planner%40workspace%3A.":
+  version: 0.0.0
+  resolution: "gakumas-data@file:../gakumas-data#../gakumas-data::hash=a0d13e&locator=gakumas-contest-planner%40workspace%3A."
+  checksum: 10/8349cbb75fc3cb6ccf020d1d48265d7f4b5392a26ee9ed82f93b975818b99945a379d6f90ef70e806c1ee1ea513167af16d2520720651f6bc9a7b5498ac05214
+  languageName: node
+  linkType: hard
 
 "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0

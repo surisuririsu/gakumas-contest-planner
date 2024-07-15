@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { useDrop } from "react-dnd";
+import { PIdols, PItems } from "gakumas-data";
 import Item from "@/components/Item";
 import IdolContext from "@/contexts/IdolContext";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { MEMORABLE_ITEMS } from "@/constants/items";
 import styles from "./ItemBank.module.scss";
 
 export default function ItemBank() {
@@ -22,17 +22,24 @@ export default function ItemBank() {
     },
   }));
 
-  const filteredItems = MEMORABLE_ITEMS.filter((item) => {
-    if (item.plan && item.plan != plan) return false;
-    if (item.idol && item.idol != idol) return false;
-    return true;
+  const filteredPIdols = PIdols.getFiltered({
+    idolIds: [idol],
+    plans: [plan],
+  });
+  const signatureItems = PItems.getFiltered({
+    pIdolIds: filteredPIdols.map((pi) => pi.id),
+  });
+  const nonSignatureItems = PItems.getFiltered({
+    plans: [plan, "free"],
+    modes: ["stage"],
+    sourceTypes: ["support"],
   });
 
   return (
     <>
       <div className={styles.bank} ref={drop}>
         <div className={styles.bankInner}>
-          {filteredItems.map((item) => (
+          {signatureItems.concat(nonSignatureItems).map((item) => (
             <Item
               key={item.id}
               itemId={item.id}
