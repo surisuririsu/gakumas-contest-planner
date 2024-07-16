@@ -1598,8 +1598,8 @@ __metadata:
 
 "gakumas-data@https://github.com/surisuririsu/gakumas-data.git":
   version: 0.0.0
-  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=1518773e45e3cc21f032f4f7964217089e4a6b10"
-  checksum: 10/be63a617d3b685879da01879449bdd9ac304011288c20de0c4ff3abfe11e225252ca158ab9660dcd4f2d8a9e14b5a190ff48dd4e2ea74e950f526e3212e3459d
+  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=9e134e79ca0dc6e16dd05357415cc2db50c6a668"
+  checksum: 10/58d6419e8fec2fb0d5acc9b46255e8c22ab9451e7762e871fc65461795ddf20c1ac08e8de8651f4469ac4cbc511c40efadc7aba4ac6e434707315d0916cd5fcf
   languageName: node
   linkType: hard
 
