@@ -1,15 +1,19 @@
 import { useContext } from "react";
+import { SkillCards } from "gakumas-data";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { CARDS_BY_ID, COST_BY_RARITY } from "@/constants/cards";
 import styles from "./CardList.module.scss";
 
 export default function DeleteCardGroupButton({ groupIndex, cards }) {
   const { cardGroups, insertCardGroup, deleteCardGroup, swapCardGroups } =
     useContext(LoadoutContext);
-  const cost = cards.reduce(
-    (acc, cur) => acc + (COST_BY_RARITY[CARDS_BY_ID[cur]?.rarity] || 0),
-    0
-  );
+
+  const cost = cards
+    .filter((id) => id)
+    .map(SkillCards.getById)
+    .reduce(
+      (acc, cur) => acc + (cur.sourceType == "pIdol" ? 0 : cur.contestPower),
+      0
+    );
 
   return (
     <div className={styles.sub}>

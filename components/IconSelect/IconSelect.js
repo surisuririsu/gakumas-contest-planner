@@ -4,11 +4,11 @@ import styles from "./IconSelect.module.scss";
 export default function IconSelect({ options, selected, onChange }) {
   return (
     <div className={styles.container}>
-      {options.map(({ alias, iconSrc }) => (
+      {options.map(({ id, iconSrc }) => (
         <div
-          key={alias}
+          key={id}
           className={`${styles.option} ${
-            selected === alias ? styles.selected : ""
+            selected === id ? styles.selected : ""
           }`}
         >
           <div className={styles.imageWrapper}>
@@ -16,7 +16,7 @@ export default function IconSelect({ options, selected, onChange }) {
               src={iconSrc}
               fill
               alt=""
-              onClick={() => onChange(alias)}
+              onClick={() => onChange(id)}
               sizes="2.5em"
             />
           </div>
