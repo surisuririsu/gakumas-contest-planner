@@ -24,6 +24,7 @@ const SIMULATOR_P_IDOL_IDS_BY_SIMULATOR_CARD_ID =
     (acc, cur) => ({
       ...acc,
       [cur.unique_skillCard_id]: cur.id,
+      [cur.unique_skillCard_id + 1]: cur.id,
     }),
     {}
   );
