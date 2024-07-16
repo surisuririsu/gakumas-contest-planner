@@ -61,14 +61,16 @@ export default function Card({
         ref={fixed ? null : dragRef}
         onClick={fixed ? null : handleClick}
       >
-        <Image
-          src={card?.icon || "/icon_placeholder.png"}
-          fill
-          alt={card?.name || ""}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          sizes="5em"
-        />
+        {card?.icon && (
+          <Image
+            src={card.icon}
+            fill
+            alt={card.name}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            sizes="5em"
+          />
+        )}
       </div>
     </div>
   );

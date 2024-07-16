@@ -54,14 +54,16 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
         ref={dragRef}
         onClick={handleClick}
       >
-        <Image
-          src={pItem?.icon || "/icon_placeholder.png"}
-          fill
-          alt={pItem?.name || ""}
-          onMouseEnter={onMouseEnter}
-          onMouseLeave={onMouseLeave}
-          sizes="3.75em"
-        />
+        {pItem?.icon && (
+          <Image
+            src={pItem.icon}
+            fill
+            alt={pItem.name}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+            sizes="3.75em"
+          />
+        )}
       </div>
     </div>
   );
