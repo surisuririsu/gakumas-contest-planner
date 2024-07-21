@@ -548,18 +548,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"array.prototype.toreversed@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "array.prototype.toreversed@npm:1.1.2"
-  dependencies:
-    call-bind: "npm:^1.0.2"
-    define-properties: "npm:^1.2.0"
-    es-abstract: "npm:^1.22.1"
-    es-shim-unscopables: "npm:^1.0.0"
-  checksum: 10/b4076d687ddc22c191863ce105d320cc4b0e1435bfda9ffeeff681682fe88fa6fe30e0d2ae94fa4b2d7fad901e1954ea4f75c1cab217db4848da84a2b5889192
-  languageName: node
-  linkType: hard
-
 "array.prototype.tosorted@npm:^1.1.4":
   version: 1.1.4
   resolution: "array.prototype.tosorted@npm:1.1.4"
@@ -1294,13 +1282,12 @@ __metadata:
   linkType: hard
 
 "eslint-plugin-react@npm:^7.33.2":
-  version: 7.34.4
-  resolution: "eslint-plugin-react@npm:7.34.4"
+  version: 7.35.0
+  resolution: "eslint-plugin-react@npm:7.35.0"
   dependencies:
     array-includes: "npm:^3.1.8"
     array.prototype.findlast: "npm:^1.2.5"
     array.prototype.flatmap: "npm:^1.3.2"
-    array.prototype.toreversed: "npm:^1.1.2"
     array.prototype.tosorted: "npm:^1.1.4"
     doctrine: "npm:^2.1.0"
     es-iterator-helpers: "npm:^1.0.19"
@@ -1317,8 +1304,8 @@ __metadata:
     string.prototype.matchall: "npm:^4.0.11"
     string.prototype.repeat: "npm:^1.0.0"
   peerDependencies:
-    eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
-  checksum: 10/9ad948a109bcb5b1f2f3a8099fa9eab3bee3eb996786f783d1f17208f44c8e3dcbc4f9dab84aa70062c03a053a48a333ca03fee21d406d5732291d204e43d9ca
+    eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
+  checksum: 10/fa0a54f9ea249cf89d92bb5983bf7df741da3709a0ebd6a885a67d05413ed302fd8b64c9dc819b33df8efa6d8b06f5e56b1f6965a9be7cc3e79054da4dbae5ed
   languageName: node
   linkType: hard
 
@@ -1635,15 +1622,15 @@ __metadata:
 
 "gakumas-data@https://github.com/surisuririsu/gakumas-data.git":
   version: 0.1.0
-  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=e3977a258c19471e1b60b87c57d2b1751b2da0aa"
-  checksum: 10/5cbaef8a1cb4c864755580c3492645db7e72dd37e5335b03ab3a64aacc64da72dfe42c2952947b8fdeb6897d027f1cecb012ad68317b11473164de7becfc7717
+  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=65de96565434b34123cc93437d877242c12d89b7"
+  checksum: 10/11a7dd1274039db0aa6fef1ae435b61ab26e4bf57fc414d003a26ae428d7bac74c9d2b115e25dda03828fe0a73d8943cde4d7f3f649f5caa15fa3b80249036a6
   languageName: node
   linkType: hard
 
 "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0
-  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=9c67ecd1560f27fc3b201a68ecdc0311e228b4db"
-  checksum: 10/06483a821b2098bc902b3fdb8c91dfb4785e3a16ec2f49d349cd2e9337164c10d438c1912a9967bfe57821d95f2fddef8681a3a9ef8b7a093c95e19ebc2312b9
+  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=70d96a39ff109545e0a0c35a8ff9bd657ce2c9c3"
+  checksum: 10/b413063473ffa38f3fe8efba7b3767f45428f9ec93a273ee4c01e7c87676d34aa5242a1a3e02066c66bcc1be0f1a59429029dbb0e6d34f535a338048043836fb
   languageName: node
   linkType: hard
 
@@ -1672,11 +1659,11 @@ __metadata:
   linkType: hard
 
 "get-tsconfig@npm:^4.5.0":
-  version: 4.7.5
-  resolution: "get-tsconfig@npm:4.7.5"
+  version: 4.7.6
+  resolution: "get-tsconfig@npm:4.7.6"
   dependencies:
     resolve-pkg-maps: "npm:^1.0.0"
-  checksum: 10/de7de5e4978354e8e6d9985baf40ea32f908a13560f793bc989930c229cc8d5c3f7b6b2896d8e43eb1a9b4e9e30018ef4b506752fd2a4b4d0dfee4af6841b119
+  checksum: 10/32da95a89f3ddbabd2a2e36f2a4add51a5e3c2b28f32e3c81494fcdbd43b7d9b42baea77784e62d10f87bb564c5ee908416aabf4c5ca9cdbb2950aa3c247f124
   languageName: node
   linkType: hard
 
@@ -2040,11 +2027,11 @@ __metadata:
   linkType: hard
 
 "is-core-module@npm:^2.11.0, is-core-module@npm:^2.13.0, is-core-module@npm:^2.13.1":
-  version: 2.14.0
-  resolution: "is-core-module@npm:2.14.0"
+  version: 2.15.0
+  resolution: "is-core-module@npm:2.15.0"
   dependencies:
     hasown: "npm:^2.0.2"
-  checksum: 10/1e0d1a16cb3a94746f6a28db09ccab4562860c94c74bacedb3a6729736d61cfb97001d2052f9622637aa7ea8e0643a3f0f4f16965c70ba6ce30a8ccfe8074af8
+  checksum: 10/70e962543e5d3a97c07cb29144a86792d545a21f28e67da5401d85878a0193d46fbab8d97bc3ca680e2778705dca66e7b6ca840c493497a27ca0e8c5f3ac3d1d
   languageName: node
   linkType: hard
 
@@ -3291,11 +3278,11 @@ __metadata:
   linkType: hard
 
 "semver@npm:^7.3.5, semver@npm:^7.5.4":
-  version: 7.6.2
-  resolution: "semver@npm:7.6.2"
+  version: 7.6.3
+  resolution: "semver@npm:7.6.3"
   bin:
     semver: bin/semver.js
-  checksum: 10/296b17d027f57a87ef645e9c725bff4865a38dfc9caf29b26aa084b85820972fbe7372caea1ba6857162fa990702c6d9c1d82297cecb72d56c78ab29070d2ca2
+  checksum: 10/36b1fbe1a2b6f873559cd57b238f1094a053dbfd997ceeb8757d79d1d2089c56d1321b9f1069ce263dc64cfa922fa1d2ad566b39426fe1ac6c723c1487589e10
   languageName: node
   linkType: hard
 
