@@ -33,6 +33,11 @@ export default function CardBank() {
     rarities: ["R", "SR", "SSR"],
     plans: [plan, "free"],
     sourceTypes: ["produce", "support"],
+  }).sort((a, b) => {
+    if (a.sourceType == b.sourceType) {
+      return a.rarity >= b.rarity ? 1 : -1;
+    }
+    return a.sourceType == "produce" && b.sourceType == "support" ? -1 : 1;
   });
 
   return (

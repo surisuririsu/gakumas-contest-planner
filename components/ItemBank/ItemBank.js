@@ -33,7 +33,7 @@ export default function ItemBank() {
     plans: [plan, "free"],
     modes: ["stage"],
     sourceTypes: ["support"],
-  });
+  }).sort((a, b) => (a.rarity >= b.rarity ? 1 : -1));
 
   return (
     <>
