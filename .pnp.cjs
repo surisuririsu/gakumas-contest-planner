@@ -29,8 +29,8 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=65de96565434b34123cc93437d877242c12d89b7"],\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=70d96a39ff109545e0a0c35a8ff9bd657ce2c9c3"],\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=d1973d78931f193ccf28d2e6d5843b8e2469794e"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=362e2da1fdb81d11ab88a16f878efb9fa83cd23d"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -894,10 +894,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001642", {\
-        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001642-794b0b6b47-8d80ea82be.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001643", {\
+        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001643-1477bdedce-dddbda29fa.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001642"]\
+          ["caniuse-lite", "npm:1.0.30001643"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2035,8 +2035,8 @@ const RAW_RUNTIME_STATE =
           ["gakumas-contest-planner", "workspace:."],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
-          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=65de96565434b34123cc93437d877242c12d89b7"],\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=70d96a39ff109545e0a0c35a8ff9bd657ce2c9c3"],\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=d1973d78931f193ccf28d2e6d5843b8e2469794e"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=362e2da1fdb81d11ab88a16f878efb9fa83cd23d"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -2049,19 +2049,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gakumas-data", [\
-      ["https://github.com/surisuririsu/gakumas-data.git#commit=65de96565434b34123cc93437d877242c12d89b7", {\
-        "packageLocation": "./.yarn/cache/gakumas-data-https-56d35242b8-11a7dd1274.zip/node_modules/gakumas-data/",\
+      ["https://github.com/surisuririsu/gakumas-data.git#commit=d1973d78931f193ccf28d2e6d5843b8e2469794e", {\
+        "packageLocation": "./.yarn/cache/gakumas-data-https-7e88d7bca0-04303c6ee8.zip/node_modules/gakumas-data/",\
         "packageDependencies": [\
-          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=65de96565434b34123cc93437d877242c12d89b7"]\
+          ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=d1973d78931f193ccf28d2e6d5843b8e2469794e"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["gakumas_contest_simulator", [\
-      ["https://github.com/katabami83/gakumas_contest_simulator.git#commit=70d96a39ff109545e0a0c35a8ff9bd657ce2c9c3", {\
-        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-93a30a07db-b413063473.zip/node_modules/gakumas_contest_simulator/",\
+      ["https://github.com/katabami83/gakumas_contest_simulator.git#commit=362e2da1fdb81d11ab88a16f878efb9fa83cd23d", {\
+        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-147208077b-b20fb83f7f.zip/node_modules/gakumas_contest_simulator/",\
         "packageDependencies": [\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=70d96a39ff109545e0a0c35a8ff9bd657ce2c9c3"]\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=362e2da1fdb81d11ab88a16f878efb9fa83cd23d"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3188,7 +3188,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", null],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
-          ["caniuse-lite", "npm:1.0.30001642"],\
+          ["caniuse-lite", "npm:1.0.30001643"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.3.1"],\
