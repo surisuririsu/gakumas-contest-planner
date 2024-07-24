@@ -20,7 +20,7 @@ const styles = {
     backgroundColor: "#ddd",
     overflow: "hidden",
   },
-  text: {
+  url: {
     flexGrow: 1,
     display: "flex",
     justifyContent: "center",
@@ -28,6 +28,7 @@ const styles = {
     color: "#666",
     fontSize: "20px",
   },
+  cardGroup: { display: "flex", flexDirection: "column" },
   card: {
     width: "68px",
     height: "68px",
@@ -37,6 +38,7 @@ const styles = {
     backgroundColor: "#ddd",
     overflow: "hidden",
   },
+  cost: { display: "flex", height: "8px", color: "#444" },
 };
 
 export default function Preview({ baseUrl, items, cardGroups }) {
@@ -57,24 +59,38 @@ export default function Preview({ baseUrl, items, cardGroups }) {
               )}
             </div>
           ))}
-        <div style={styles.text}>gkcontest.ris.moe</div>
+        <div style={styles.url}>gkcontest.ris.moe</div>
       </div>
       {cardGroups.slice(0, 4).map((cards, groupIndex) => (
-        <div key={groupIndex} style={styles.row}>
-          {cards
-            .slice(0, 6)
-            .map(SkillCards.getById)
-            .map((card, index) => (
-              <div key={index} style={styles.card}>
-                {card && (
-                  <img
-                    src={`${baseUrl}${card.icon.src}`}
-                    width={60}
-                    height={60}
-                  />
-                )}
-              </div>
-            ))}
+        <div style={styles.cardGroup}>
+          <div key={groupIndex} style={styles.row}>
+            {cards
+              .slice(0, 6)
+              .map(SkillCards.getById)
+              .map((card, index) => (
+                <div key={index} style={styles.card}>
+                  {card && (
+                    <img
+                      src={`${baseUrl}${card.icon.src}`}
+                      width={60}
+                      height={60}
+                    />
+                  )}
+                </div>
+              ))}
+          </div>
+          <div style={styles.cost}>
+            Cost:{" "}
+            {cards
+              .slice(0, 6)
+              .filter((id) => id)
+              .map(SkillCards.getById)
+              .reduce(
+                (acc, cur) =>
+                  acc + (cur.sourceType == "pIdol" ? 0 : cur.contestPower),
+                0
+              )}
+          </div>
         </div>
       ))}
     </div>

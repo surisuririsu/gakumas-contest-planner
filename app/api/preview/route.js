@@ -24,7 +24,7 @@ export async function GET(request) {
     );
   }
 
-  const height = 32 + 48 + (16 + 68) * Math.min(cards.length, 4);
+  const height = 32 + 48 + (24 + 68) * Math.min(cards.length, 4) + 8;
 
   return new ImageResponse(
     (
