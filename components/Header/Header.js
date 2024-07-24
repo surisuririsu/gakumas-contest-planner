@@ -1,3 +1,4 @@
+"use client";
 import { useContext, useState } from "react";
 import { Idols } from "gakumas-data";
 import IconSelect from "@/components/IconSelect";

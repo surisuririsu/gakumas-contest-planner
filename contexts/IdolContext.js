@@ -1,3 +1,4 @@
+"use client";
 import { createContext, useCallback, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { LEGACY_IDOL_MAP } from "@/utils/legacy";
