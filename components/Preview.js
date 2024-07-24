@@ -62,8 +62,8 @@ export default function Preview({ baseUrl, items, cardGroups }) {
         <div style={styles.url}>gkcontest.ris.moe</div>
       </div>
       {cardGroups.slice(0, 4).map((cards, groupIndex) => (
-        <div style={styles.cardGroup}>
-          <div key={groupIndex} style={styles.row}>
+        <div key={groupIndex} style={styles.cardGroup}>
+          <div style={styles.row}>
             {cards
               .slice(0, 6)
               .map(SkillCards.getById)
