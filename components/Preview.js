@@ -46,8 +46,8 @@ export default function Preview({ baseUrl, items, cardGroups }) {
         {items
           .slice(0, 4)
           .map(PItems.getById)
-          .map((item) => (
-            <div style={styles.item}>
+          .map((item, index) => (
+            <div key={index} style={styles.item}>
               {item && (
                 <img
                   src={`${baseUrl}${item.icon.src}`}
@@ -59,13 +59,13 @@ export default function Preview({ baseUrl, items, cardGroups }) {
           ))}
         <div style={styles.text}>gkcontest.ris.moe</div>
       </div>
-      {cardGroups.slice(0, 4).map((cards) => (
-        <div style={styles.row}>
+      {cardGroups.slice(0, 4).map((cards, groupIndex) => (
+        <div key={groupIndex} style={styles.row}>
           {cards
             .slice(0, 6)
             .map(SkillCards.getById)
-            .map((card) => (
-              <div style={styles.card}>
+            .map((card, index) => (
+              <div key={index} style={styles.card}>
                 {card && (
                   <img
                     src={`${baseUrl}${card.icon.src}`}
