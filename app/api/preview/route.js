@@ -12,6 +12,8 @@ export async function GET(request) {
 
   let items = searchParams.get("items") || "0-0-0-0";
   let cards = searchParams.get("cards") || "0-0-0-0-0-0_0-0-0-0-0-0";
+  const empty = cards == "0-0-0-0-0-0_0-0-0-0-0-0";
+
   items = items.split("-").map((n) => parseInt(n, 10));
   cards = cards
     .split("_")
@@ -24,7 +26,11 @@ export async function GET(request) {
     );
   }
 
-  const height = 32 + 48 + (24 + 68) * Math.min(cards.length, 4) + 8;
+  const height =
+    32 + // Margin
+    48 + // P-Items
+    (16 + 68 + (empty ? 0 : 8)) * Math.min(cards.length, 4) + // Card groups
+    (empty ? 0 : 8); // Extra for cost
 
   return new ImageResponse(
     (
@@ -32,6 +38,7 @@ export async function GET(request) {
         baseUrl={`${protocol}//${host}`}
         items={items}
         cardGroups={cards}
+        empty={empty}
       />
     ),
     { width: 470, height }
