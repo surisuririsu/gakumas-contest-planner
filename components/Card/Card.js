@@ -2,7 +2,6 @@ import { useContext } from "react";
 import Image from "next/image";
 import { useDrag, useDrop } from "react-dnd";
 import { SkillCards } from "gakumas-data";
-import IdolContext from "@/contexts/IdolContext";
 import LoadoutContext from "@/contexts/LoadoutContext";
 import styles from "./Card.module.scss";
 
@@ -13,7 +12,6 @@ export default function Card({
   onMouseEnter,
   onMouseLeave,
 }) {
-  const { idol } = useContext(IdolContext);
   const { selection, setSelection, changeCard } = useContext(LoadoutContext);
   const card = SkillCards.getById(cardId);
   const isBank = index[0] === -1;
@@ -65,12 +63,12 @@ export default function Card({
       >
         {card?.icon && (
           <Image
-            src={card.getDynamicIcon(idol)}
+            src={card.icon}
             fill
             alt={card.name}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            sizes="4.5em"
+            sizes="5em"
           />
         )}
       </div>
