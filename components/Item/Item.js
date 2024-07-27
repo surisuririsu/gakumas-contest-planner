@@ -61,7 +61,7 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
             alt={pItem.name}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
-            sizes="3.75em"
+            sizes="3.25em"
           />
         )}
       </div>
