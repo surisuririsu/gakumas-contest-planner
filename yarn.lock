@@ -6,11 +6,11 @@ __metadata:
   cacheKey: 10
 
 "@babel/runtime@npm:^7.9.2":
-  version: 7.24.8
-  resolution: "@babel/runtime@npm:7.24.8"
+  version: 7.25.0
+  resolution: "@babel/runtime@npm:7.25.0"
   dependencies:
     regenerator-runtime: "npm:^0.14.0"
-  checksum: 10/e6f335e472a8a337379effc15815dd0eddf6a7d0c00b50deb4f9e9585819b45431d0ff3c2d3d0fa58c227a9b04dcc4a85e7245fb57493adb2863b5208c769cbd
+  checksum: 10/6870e9e0e9125075b3aeba49a266f442b10820bfc693019eb6c1785c5a0edbe927e98b8238662cdcdba17842107c040386c3b69f39a0a3b217f9d00ffe685b27
   languageName: node
   linkType: hard
 
@@ -252,9 +252,9 @@ __metadata:
   linkType: hard
 
 "@rushstack/eslint-patch@npm:^1.3.3":
-  version: 1.10.3
-  resolution: "@rushstack/eslint-patch@npm:1.10.3"
-  checksum: 10/e1986178618bfb5fb636a54c420a7c359879d7aed6a0e456333a92fdc93e0e7a9a914114284308317cdc75e522c0696f760cd6d0b77409ed8b9633e75f096628
+  version: 1.10.4
+  resolution: "@rushstack/eslint-patch@npm:1.10.4"
+  checksum: 10/fa14a091cc800e1fac75c03112db03eaebbdc2de6e1532ed7702e106c3ce0cbf9b896794d885d455b225e9cc696a5e10c7bfb803d00774461d691e7a39915fc7
   languageName: node
   linkType: hard
 
@@ -976,12 +976,12 @@ __metadata:
   linkType: hard
 
 "enhanced-resolve@npm:^5.12.0":
-  version: 5.17.0
-  resolution: "enhanced-resolve@npm:5.17.0"
+  version: 5.17.1
+  resolution: "enhanced-resolve@npm:5.17.1"
   dependencies:
     graceful-fs: "npm:^4.2.4"
     tapable: "npm:^2.2.0"
-  checksum: 10/8f7bf71537d78e7d20a27363793f2c9e13ec44800c7c7830364a448f80a44994aa19d64beecefa1ab49e4de6f7fbe18cc0931dc449c115f02918ff5fcbe7705f
+  checksum: 10/e8e03cb7a4bf3c0250a89afbd29e5ec20e90ba5fcd026066232a0754864d7d0a393fa6fc0e5379314a6529165a1834b36731147080714459d98924520410d8f5
   languageName: node
   linkType: hard
 
@@ -1608,7 +1608,7 @@ __metadata:
   dependencies:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.4"
-    gakumas-data: "https://github.com/surisuririsu/gakumas-data.git#0.4.1"
+    gakumas-data: "https://github.com/surisuririsu/gakumas-data.git#v0.5.0"
     gakumas_contest_simulator: "https://github.com/katabami83/gakumas_contest_simulator.git"
     next: "npm:14.2.4"
     react: "npm:^18"
@@ -1620,17 +1620,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gakumas-data@https://github.com/surisuririsu/gakumas-data.git#0.4.1":
+"gakumas-data@https://github.com/surisuririsu/gakumas-data.git#v0.5.0":
   version: 0.4.1
-  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=85aa294b08a35befcbf88aa9b3616e9d95825e8f"
-  checksum: 10/13b9cbf2758b8e238f873177b597894bc11057e055f295395c4fc943035e987312c1eae45fddb8bba25f48e72de762e01dd12e4f5b88541ee73ca2cccbb0d4af
+  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=dc93f6e8c4ed5fed71597d13c2aa8930faab4567"
+  checksum: 10/3381660d6b98996d8b775d478fc0794f63da0b22132c8ce06b05f82152f2e2687b7d1ebd2391b878e14047cc391a52ec175b0116677cabc49cecb7443988bd76
   languageName: node
   linkType: hard
 
 "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0
-  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=362e2da1fdb81d11ab88a16f878efb9fa83cd23d"
-  checksum: 10/b20fb83f7fef77c28028a6733df312445cca21f2b8fd127532e20af154c49ee92291b2748e3f53fd97db8f1435ff12f3286916d1a11d40fd223ee74924ac0e31
+  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=9be006d071c7ff977b209deb2c21f9f91e43d170"
+  checksum: 10/5a496213b73f3e1f8ba3f3e8be0751057a6d51ae269f464fa6fdc20a6a173247012355f85771b434858d6ee221632fb2027c998a21c28dc887600b8cd7dc8f2a
   languageName: node
   linkType: hard
 
@@ -1894,9 +1894,9 @@ __metadata:
   linkType: hard
 
 "immutable@npm:^4.0.0":
-  version: 4.3.6
-  resolution: "immutable@npm:4.3.6"
-  checksum: 10/59fedb67f26e265035616b27e33ef90b53b434cf76fb09212ec2d6ae32ee8d2fe2641e6dc32dbc78498c521fbf5f72c6740d39affba63a0a36a3884272371857
+  version: 4.3.7
+  resolution: "immutable@npm:4.3.7"
+  checksum: 10/37d963c5050f03ae5f3714ba7a43d469aa482051087f4c65d673d1501c309ea231d87480c792e19fa85e2eaf965f76af5d0aa92726505f3cfe4af91619dfb80b
   languageName: node
   linkType: hard
 
