@@ -1,5 +1,5 @@
 "use client";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 import { TouchBackend } from "react-dnd-touch-backend";
@@ -15,15 +15,11 @@ import styles from "./Configurator.module.scss";
 export default function Configurator() {
   const { items, cardGroups } = useContext(LoadoutContext);
   const [activeBank, setActiveBank] = useState("CARD");
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    setIsMobile(
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      )
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
     );
-  }, []);
 
   return (
     <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
