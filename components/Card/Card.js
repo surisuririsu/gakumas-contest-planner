@@ -65,7 +65,7 @@ export default function Card({
       >
         {card?.icon && (
           <Image
-            src={card.getDynamicIcon(idol)}
+            src={card.getDynamicIcon?.(idol) || card.icon}
             fill
             alt={card.name}
             onMouseEnter={onMouseEnter}
