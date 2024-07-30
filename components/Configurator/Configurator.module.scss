@@ -21,10 +21,11 @@
 
   .loadout {
     @extend .section;
+    align-items: flex-start;
     overflow: auto;
     padding: 1em 0.5em;
 
-    @media only screen and (max-width: 496px) {
+    @media only screen and (max-width: 786px) {
       position: sticky;
       top: 0;
       z-index: 1;
@@ -34,11 +35,18 @@
     }
   }
 
+  .expanders {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
   .banks {
     @extend .section;
     flex: 1;
 
-    @media only screen and (max-width: 496px) {
+    @media only screen and (max-width: 786px) {
       padding: 2em 4em;
     }
   }

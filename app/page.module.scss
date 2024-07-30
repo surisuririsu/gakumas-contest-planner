@@ -34,11 +34,11 @@
 
     @media only screen and (max-width: 786px) {
       overflow: auto;
+      padding: 0;
     }
 
     @media only screen and (max-width: 496px) {
       font-size: 0.65rem;
-      padding: 0;
     }
   }
 }

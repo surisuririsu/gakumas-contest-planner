@@ -33,8 +33,10 @@ export default function Configurator() {
               cards={cards}
             />
           ))}
-          <DefaultCards />
-          <Simulator />
+          <div className={styles.expanders}>
+            <DefaultCards />
+            <Simulator />
+          </div>
         </div>
         <div className={styles.banks}>
           <div className={styles.bankTabs}>
