@@ -27,9 +27,9 @@ export default function DefaultCards() {
           ))}
         </div>
       )}
-      <a className={styles.toggle} onClick={() => setVisible(!visible)}>
+      <button className={styles.toggle} onClick={() => setVisible(!visible)}>
         {visible ? "Hide" : "Show"} default cards
-      </a>
+      </button>
     </div>
   );
 }

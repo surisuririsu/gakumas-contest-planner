@@ -10,11 +10,19 @@
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1.25em;
+    padding: 1em;
     border: 0.25em solid #ccc;
-    border-radius: 2.25em;
+    border-radius: 4em;
     z-index: 2;
     cursor: pointer;
+
+    & > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #666;
+      font-size: 1.25rem;
+    }
   }
 
   @media only screen and (max-width: 786px) {

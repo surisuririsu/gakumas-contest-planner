@@ -40,18 +40,18 @@ export default function Configurator() {
         </div>
         <div className={styles.banks}>
           <div className={styles.bankTabs}>
-            <a
+            <button
               className={activeBank === "CARD" ? styles.active : ""}
               onClick={() => setActiveBank("CARD")}
             >
               Skill Cards
-            </a>
-            <a
+            </button>
+            <button
               className={activeBank === "PITEM" ? styles.active : ""}
               onClick={() => setActiveBank("PITEM")}
             >
               P Items
-            </a>
+            </button>
           </div>
           {activeBank === "PITEM" && <ItemBank />}
           {activeBank === "CARD" && <CardBank />}

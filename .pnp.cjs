@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["react-dnd-html5-backend", "npm:16.0.1"],\
           ["react-dnd-touch-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
+          ["react-icons", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:5.2.1"],\
           ["sass", "npm:1.77.8"]\
         ],\
         "linkType": "SOFT"\
@@ -2043,6 +2044,7 @@ const RAW_RUNTIME_STATE =
           ["react-dnd-html5-backend", "npm:16.0.1"],\
           ["react-dnd-touch-backend", "npm:16.0.1"],\
           ["react-dom", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:18.3.1"],\
+          ["react-icons", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:5.2.1"],\
           ["sass", "npm:1.77.8"]\
         ],\
         "linkType": "SOFT"\
@@ -3655,6 +3657,28 @@ const RAW_RUNTIME_STATE =
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.3.1"],\
           ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-icons", [\
+      ["npm:5.2.1", {\
+        "packageLocation": "./.yarn/cache/react-icons-npm-5.2.1-e27cbb9ccf-8cdf49a958.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:5.2.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:5.2.1", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-26eaa3f92a/0/cache/react-icons-npm-5.2.1-e27cbb9ccf-8cdf49a958.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:5.2.1"],\
+          ["@types/react", null],\
+          ["react", "npm:18.3.1"]\
         ],\
         "packagePeers": [\
           "@types/react",\

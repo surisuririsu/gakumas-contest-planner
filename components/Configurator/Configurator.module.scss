@@ -55,15 +55,13 @@
     display: flex;
     gap: 1em;
 
-    a {
+    button {
       flex: 1;
-      text-align: center;
       font-weight: bold;
       color: #666;
       padding: 0.5em;
       border-radius: 1em;
       transition: all 0.3s;
-      cursor: pointer;
 
       &.active {
         box-shadow: 0 0 0.375em #666;

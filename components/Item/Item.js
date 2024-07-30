@@ -46,7 +46,7 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
 
   return (
     <div ref={dropRef}>
-      <div
+      <button
         className={`
           ${styles.item}
           ${selected ? styles.selected : ""}
@@ -64,7 +64,7 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
             sizes="3.25em"
           />
         )}
-      </div>
+      </button>
     </div>
   );
 }

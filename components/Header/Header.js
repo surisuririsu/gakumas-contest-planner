@@ -1,5 +1,6 @@
 "use client";
 import { useContext, useState } from "react";
+import { FaCheck, FaLink } from "react-icons/fa6";
 import { Idols } from "gakumas-data";
 import IconSelect from "@/components/IconSelect";
 import IdolContext from "@/contexts/IdolContext";
@@ -38,7 +39,7 @@ export default function Header() {
           setTimeout(() => setCopied(false), 3000);
         }}
       >
-        {copied ? "✔️" : "🔗"}
+        <div>{copied ? <FaCheck /> : <FaLink />}</div>
       </button>
     </div>
   );

@@ -12,7 +12,8 @@
 
   .buttonGroup {
     display: flex;
-    gap: 0.25em;
+    gap: 0.5em;
+    padding: 0 0.25em;
     opacity: 0;
     transition: all 0.3s;
 
@@ -21,31 +22,34 @@
     }
   }
 
-  &:hover {
+  &:hover,
+  &:focus-within {
     .buttonGroup {
       opacity: 1;
     }
   }
 
   button {
-    border-radius: 1.25em;
-    padding: 0.25em;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
     cursor: pointer;
 
     &:disabled {
+      color: #ccc;
       cursor: not-allowed;
     }
   }
 
   .addButton {
-    border: 0.2em solid #6c4;
+    color: #4c4;
   }
 
   .moveButton {
-    border: 0.2em solid #aaf;
+    color: #7af;
   }
 
   .deleteButton {
-    border: 0.2em solid #faa;
+    color: #f88;
   }
 }

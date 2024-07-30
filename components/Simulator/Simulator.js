@@ -19,9 +19,9 @@ export default function Simulator() {
   if (cardGroups.length < 2) return null;
   if (!visible) {
     return (
-      <a className={styles.link} onClick={() => setVisible(true)}>
+      <button className={styles.link} onClick={() => setVisible(true)}>
         Simulator (by かふぇもっと)
-      </a>
+      </button>
     );
   }
 

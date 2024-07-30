@@ -54,7 +54,8 @@ export default function Card({
 
   return (
     <div ref={fixed ? null : dropRef}>
-      <div
+      <button
+        tabIndex={fixed ? -1 : undefined}
         className={`
           ${styles.card}
           ${selected ? styles.selected : ""}
@@ -73,7 +74,7 @@ export default function Card({
             sizes="4.5em"
           />
         )}
-      </div>
+      </button>
     </div>
   );
 }

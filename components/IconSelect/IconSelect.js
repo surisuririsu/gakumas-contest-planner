@@ -5,22 +5,17 @@ export default function IconSelect({ options, selected, onChange }) {
   return (
     <div className={styles.container}>
       {options.map(({ id, iconSrc }) => (
-        <div
+        <button
           key={id}
           className={`${styles.option} ${
             selected === id ? styles.selected : ""
           }`}
+          onClick={() => onChange(id)}
         >
           <div className={styles.imageWrapper}>
-            <Image
-              src={iconSrc}
-              fill
-              alt=""
-              onClick={() => onChange(id)}
-              sizes="2.5em"
-            />
+            <Image src={iconSrc} fill alt="" sizes="2.5em" />
           </div>
-        </div>
+        </button>
       ))}
     </div>
   );

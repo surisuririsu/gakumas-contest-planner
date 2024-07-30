@@ -9,6 +9,6 @@
   cursor: grab;
 
   &.selected {
-    box-shadow: 0 0 0.8em #02f;
+    outline: 0.25em solid #f39800;
   }
 }
