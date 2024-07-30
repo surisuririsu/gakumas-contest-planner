@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import Header from "@/components/Header";
 import Configurator from "@/components/Configurator";
-import DevMessage from "@/components/DevMessage/DevMessage";
 import { IdolContextProvider } from "@/contexts/IdolContext";
 import { LoadoutContextProvider } from "@/contexts/LoadoutContext";
 import styles from "./page.module.scss";
@@ -30,7 +29,6 @@ export default function Home() {
               <hr />
               <Configurator />
             </div>
-            <DevMessage />
           </main>
         </LoadoutContextProvider>
       </IdolContextProvider>
