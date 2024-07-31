@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { useContext, useState } from "react";
 import LoadoutContext from "@/contexts/LoadoutContext";
-import { CONTEST_STAGES } from "@/constants/contestStages";
-import { generateSimulatorUrl } from "@/utils/simulator";
+import { CONTEST_STAGES, generateSimulatorUrl } from "@/utils/simulator";
 import styles from "./Simulator.module.scss";
 
 export default function Simulator() {

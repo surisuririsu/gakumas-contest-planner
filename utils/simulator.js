@@ -1,7 +1,18 @@
 import { PItems, SkillCards } from "gakumas-data";
+import { ContestData } from "gakumas_contest_simulator/scripts/simulator/data/contestData";
 import { PIdolData as SimulatorPIdols } from "gakumas_contest_simulator/scripts/simulator/data/pIdolData";
 import { PItemData as SimulatorPItems } from "gakumas_contest_simulator/scripts/simulator/data/pItemData";
 import { SkillCardData as SimulatorSkillCards } from "gakumas_contest_simulator/scripts/simulator/data/skillCardData";
+
+export const CONTEST_STAGES = ContestData.getAll().reduce((acc, cur) => {
+  const stages = cur.stages.map((stage, stageIdx) => ({
+    id: `${cur.id}:${stageIdx}`,
+    name: `${cur.name} ${stage.name}`,
+    criteria: cur.criteria,
+    plan: stage.plan,
+  }));
+  return stages.concat(acc);
+}, []);
 
 const SIMULATOR_ITEM_IDS_BY_NAME = SimulatorPItems.getAll().reduce(
   (acc, cur) => ({
