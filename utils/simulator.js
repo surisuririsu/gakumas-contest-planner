@@ -73,10 +73,14 @@ const SIMULATOR_URL_BASE =
   "https://katabami83.github.io/gakumas_contest_simulator";
 
 export function generateSimulatorUrl(items, cardGroups, stage, status) {
-  const mainIdolCard = cardGroups[0]
+  const groups = cardGroups.slice();
+  while (groups.length < 2) {
+    groups.push([0, 0, 0, 0, 0, 0]);
+  }
+  const mainIdolCard = groups[0]
     .map((cid) => SkillCards.getById(cid))
     .find((c) => c?.sourceType == "pIdol");
-  const subIdolCard = cardGroups[1]
+  const subIdolCard = groups[1]
     .map((cid) => SkillCards.getById(cid))
     .find((c) => c?.sourceType == "pIdol");
   const mainIdolCardSimulatorId = SIMULATOR_CARD_MAP[mainIdolCard?.id] || -1;
@@ -86,7 +90,7 @@ export function generateSimulatorUrl(items, cardGroups, stage, status) {
     .filter((i) => PItems.getById(i) && PItems.getById(i).sourceType != "pIdol")
     .map((i) => SIMULATOR_ITEM_MAP[i] || -1);
 
-  const cardSimulatorIds = cardGroups
+  const cardSimulatorIds = groups
     .slice(0, 2)
     .map((cg, idx) =>
       [idx ? subIdolCardSimulatorId : mainIdolCardSimulatorId].concat(

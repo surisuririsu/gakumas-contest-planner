@@ -23,7 +23,7 @@ export default function DeleteCardGroupButton({ groupIndex, cards }) {
 
   return (
     <div className={styles.sub}>
-      <div>Estimated card cost: {cost}</div>
+      <div>コスト: {cost}</div>
       <div className={styles.buttonGroup}>
         <button
           className={styles.addButton}

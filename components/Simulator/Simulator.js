@@ -6,7 +6,6 @@ import styles from "./Simulator.module.scss";
 
 export default function Simulator() {
   const { items, cardGroups } = useContext(LoadoutContext);
-  const [visible, setVisible] = useState(false);
   const [stage, setStage] = useState(null);
   const [showOptions, setShowOptions] = useState(false);
   const [vocal, setVocal] = useState(null);
@@ -14,15 +13,6 @@ export default function Simulator() {
   const [visual, setVisual] = useState(null);
   const [hp, setHP] = useState(null);
   const selectedStage = CONTEST_STAGES.find((s) => s.id == stage);
-
-  if (cardGroups.length < 2) return null;
-  if (!visible) {
-    return (
-      <button className={styles.link} onClick={() => setVisible(true)}>
-        Simulator (by かふぇもっと)
-      </button>
-    );
-  }
 
   const simulatorUrl = generateSimulatorUrl(items, cardGroups, stage, [
     vocal,
@@ -40,7 +30,7 @@ export default function Simulator() {
         >
           {selectedStage ? (
             <>
-              Stage: {selectedStage.name}
+              ステージ: {selectedStage.name}
               <div className={styles.imageWrapper}>
                 <Image
                   src={`/plans/${selectedStage.plan}.png`}
@@ -56,7 +46,7 @@ export default function Simulator() {
               </div>
             </>
           ) : (
-            <div className={styles.placeholder}>Select stage</div>
+            <div className={styles.placeholder}>ステージ選択</div>
           )}
         </button>
 
@@ -87,17 +77,23 @@ export default function Simulator() {
         )}
       </div>
       <div className={styles.statusInputs}>
-        <input placeholder="Vocal" onChange={(e) => setVocal(e.target.value)} />
-        <input placeholder="Dance" onChange={(e) => setDance(e.target.value)} />
         <input
-          placeholder="Visual"
+          placeholder="ボーカル"
+          onChange={(e) => setVocal(e.target.value)}
+        />
+        <input
+          placeholder="ダンス"
+          onChange={(e) => setDance(e.target.value)}
+        />
+        <input
+          placeholder="ビジュアル"
           onChange={(e) => setVisual(e.target.value)}
         />
-        <input placeholder="HP" onChange={(e) => setHP(e.target.value)} />
+        <input placeholder="体力" onChange={(e) => setHP(e.target.value)} />
       </div>
       {stage && vocal && dance && visual && hp && (
         <a className={styles.link} href={simulatorUrl} target="_blank">
-          Go to simulator
+          シミュレーターへGO!
         </a>
       )}
     </>

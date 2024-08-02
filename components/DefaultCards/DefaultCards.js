@@ -10,26 +10,18 @@ export const DEFAULT_CARDS_BY_PLAN = {
 
 export default function DefaultCards() {
   const { plan } = useContext(IdolContext);
-  const [visible, setVisible] = useState(false);
   const defaultCards = DEFAULT_CARDS_BY_PLAN[plan];
 
   return (
-    <div>
-      {visible && (
-        <div className={styles.list}>
-          {defaultCards.map((cardId, index) => (
-            <Card
-              key={`${index}_${cardId}`}
-              cardId={cardId}
-              index={[-1, 0]}
-              fixed
-            />
-          ))}
-        </div>
-      )}
-      <button className={styles.toggle} onClick={() => setVisible(!visible)}>
-        {visible ? "Hide" : "Show"} default cards
-      </button>
+    <div className={styles.list}>
+      {defaultCards.map((cardId, index) => (
+        <Card
+          key={`${index}_${cardId}`}
+          cardId={cardId}
+          index={[-1, 0]}
+          fixed
+        />
+      ))}
     </div>
   );
 }
