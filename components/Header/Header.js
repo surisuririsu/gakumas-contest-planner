@@ -19,14 +19,16 @@ export default function Header() {
         options={PLANS.map((alias) => ({
           id: alias,
           iconSrc: `/plans/${alias}.png`,
+          alt: alias,
         }))}
         selected={plan}
         onChange={setPlan}
       />
       <IconSelect
-        options={Idols.getAll().map(({ id, icon }) => ({
+        options={Idols.getAll().map(({ id, icon, name }) => ({
           id,
           iconSrc: icon,
+          alt: name,
         }))}
         selected={idol}
         onChange={setIdol}

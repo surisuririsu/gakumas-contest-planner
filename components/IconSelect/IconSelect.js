@@ -4,7 +4,7 @@ import styles from "./IconSelect.module.scss";
 export default function IconSelect({ options, selected, onChange }) {
   return (
     <div className={styles.container}>
-      {options.map(({ id, iconSrc }) => (
+      {options.map(({ id, iconSrc, alt }) => (
         <button
           key={id}
           className={`${styles.option} ${
@@ -13,7 +13,7 @@ export default function IconSelect({ options, selected, onChange }) {
           onClick={() => onChange(id)}
         >
           <div className={styles.imageWrapper}>
-            <Image src={iconSrc} fill alt="" sizes="2.5em" />
+            <Image src={iconSrc} fill alt={alt} sizes="2.5em" />
           </div>
         </button>
       ))}
