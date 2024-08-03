@@ -53,28 +53,26 @@ export default function Card({
   }
 
   return (
-    <div ref={fixed ? null : dropRef}>
-      <button
-        tabIndex={fixed ? -1 : undefined}
-        className={`
+    <button
+      tabIndex={fixed ? -1 : undefined}
+      className={`
           ${styles.card}
           ${selected ? styles.selected : ""}
           ${fixed ? "" : styles.draggable}
         `}
-        ref={fixed ? null : dragRef}
-        onClick={fixed ? null : handleClick}
-      >
-        {card?.icon && (
-          <Image
-            src={card.getDynamicIcon?.(idol) || card.icon}
-            fill
-            alt={card.name}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            sizes="4.5em"
-          />
-        )}
-      </button>
-    </div>
+      ref={fixed ? null : (node) => dragRef(dropRef(node))}
+      onClick={fixed ? null : handleClick}
+    >
+      {card?.icon && (
+        <Image
+          src={card.getDynamicIcon?.(idol) || card.icon}
+          fill
+          alt={card.name}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          sizes="4.5em"
+        />
+      )}
+    </button>
   );
 }

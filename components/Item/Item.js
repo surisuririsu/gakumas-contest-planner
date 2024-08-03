@@ -45,26 +45,24 @@ export default function Item({ itemId, index, onMouseEnter, onMouseLeave }) {
   }
 
   return (
-    <div ref={dropRef}>
-      <button
-        className={`
+    <button
+      className={`
           ${styles.item}
           ${selected ? styles.selected : ""}
         `}
-        ref={dragRef}
-        onClick={handleClick}
-      >
-        {pItem?.icon && (
-          <Image
-            src={pItem.icon}
-            fill
-            alt={pItem.name}
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
-            sizes="3.25em"
-          />
-        )}
-      </button>
-    </div>
+      ref={(node) => dragRef(dropRef(node))}
+      onClick={handleClick}
+    >
+      {pItem?.icon && (
+        <Image
+          src={pItem.icon}
+          fill
+          alt={pItem.name}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+          sizes="3.25em"
+        />
+      )}
+    </button>
   );
 }
