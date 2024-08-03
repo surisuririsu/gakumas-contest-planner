@@ -30,7 +30,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=f52cb7a5a2e2c752411a4cb15600259cdb863bc2"],\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=6e7fcf09db3e7f5ad9a30ec973504c1936ddc336"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=0b8a1818a4ae4f6c3b9ef4a751262433a242e557"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -895,10 +895,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["caniuse-lite", [\
-      ["npm:1.0.30001645", {\
-        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001645-2a25aaa45a-a59d80e5a1.zip/node_modules/caniuse-lite/",\
+      ["npm:1.0.30001646", {\
+        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001646-2501598beb-6c66a5677b.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
-          ["caniuse-lite", "npm:1.0.30001645"]\
+          ["caniuse-lite", "npm:1.0.30001646"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -2037,7 +2037,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["gakumas-data", "https://github.com/surisuririsu/gakumas-data.git#commit=f52cb7a5a2e2c752411a4cb15600259cdb863bc2"],\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=6e7fcf09db3e7f5ad9a30ec973504c1936ddc336"],\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=0b8a1818a4ae4f6c3b9ef4a751262433a242e557"],\
           ["next", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:14.2.4"],\
           ["react", "npm:18.3.1"],\
           ["react-dnd", "virtual:056716338405b8870c69011081775fd5f14d28c19b6215a5a309e5be81dda1d70678e00d5c4388b76d97a950b26517e449478aea92a2c92df6ad670669557de9#npm:16.0.1"],\
@@ -2060,10 +2060,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["gakumas_contest_simulator", [\
-      ["https://github.com/katabami83/gakumas_contest_simulator.git#commit=6e7fcf09db3e7f5ad9a30ec973504c1936ddc336", {\
-        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-815ed2ef52-3bfd9305e0.zip/node_modules/gakumas_contest_simulator/",\
+      ["https://github.com/katabami83/gakumas_contest_simulator.git#commit=0b8a1818a4ae4f6c3b9ef4a751262433a242e557", {\
+        "packageLocation": "./.yarn/cache/gakumas_contest_simulator-https-00d07e2e70-590ddb1e62.zip/node_modules/gakumas_contest_simulator/",\
         "packageDependencies": [\
-          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=6e7fcf09db3e7f5ad9a30ec973504c1936ddc336"]\
+          ["gakumas_contest_simulator", "https://github.com/katabami83/gakumas_contest_simulator.git#commit=0b8a1818a4ae4f6c3b9ef4a751262433a242e557"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -3190,7 +3190,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", null],\
           ["@types/sass", null],\
           ["busboy", "npm:1.6.0"],\
-          ["caniuse-lite", "npm:1.0.30001645"],\
+          ["caniuse-lite", "npm:1.0.30001646"],\
           ["graceful-fs", "npm:4.2.11"],\
           ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.3.1"],\
