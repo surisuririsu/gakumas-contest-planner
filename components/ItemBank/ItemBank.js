@@ -4,6 +4,7 @@ import { PIdols, PItems } from "gakumas-data";
 import Item from "@/components/Item";
 import IdolContext from "@/contexts/IdolContext";
 import LoadoutContext from "@/contexts/LoadoutContext";
+import { comparePItems } from "@/utils/sort";
 import styles from "./ItemBank.module.scss";
 
 export default function ItemBank() {
@@ -33,7 +34,7 @@ export default function ItemBank() {
     plans: [plan, "free"],
     modes: ["stage"],
     sourceTypes: ["support"],
-  }).sort((a, b) => (a.rarity >= b.rarity ? 1 : -1));
+  }).sort(comparePItems);
 
   return (
     <>

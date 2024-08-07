@@ -4,6 +4,7 @@ import { PIdols, SkillCards } from "gakumas-data";
 import IdolContext from "@/contexts/IdolContext";
 import LoadoutContext from "@/contexts/LoadoutContext";
 import Card from "@/components/Card";
+import { compareSkillCards } from "@/utils/sort";
 import styles from "./CardBank.module.scss";
 
 export default function CardBank() {
@@ -33,12 +34,7 @@ export default function CardBank() {
     rarities: ["R", "SR", "SSR"],
     plans: [plan, "free"],
     sourceTypes: ["produce", "support"],
-  }).sort((a, b) => {
-    if (a.sourceType == b.sourceType) {
-      return a.rarity >= b.rarity ? 1 : -1;
-    }
-    return a.sourceType == "produce" && b.sourceType == "support" ? -1 : 1;
-  });
+  }).sort(compareSkillCards);
 
   return (
     <>
