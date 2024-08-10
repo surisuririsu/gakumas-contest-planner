@@ -701,9 +701,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001579":
-  version: 1.0.30001650
-  resolution: "caniuse-lite@npm:1.0.30001650"
-  checksum: 10/590cea6d819d9551ba9dd4c29ea1c57ec7f6767e4065211bb49a18b4fdf02ad775c4e6616ee48c3997b287d0524387899522731240a9f5d725623d52c86abef2
+  version: 1.0.30001651
+  resolution: "caniuse-lite@npm:1.0.30001651"
+  checksum: 10/fe4857b2a91a9cb77993eec9622de68bea0df17c31cb9584ca5c562f64bb3b8fda316d898aa3b1ee3ee9f7d80f6bf13c42acb09d9a56a1a6c64afaf7381472fa
   languageName: node
   linkType: hard
 
@@ -1608,7 +1608,7 @@ __metadata:
   dependencies:
     eslint: "npm:^8"
     eslint-config-next: "npm:14.2.4"
-    gakumas-data: "https://github.com/surisuririsu/gakumas-data.git#v0.6.1"
+    gakumas-data: "https://github.com/surisuririsu/gakumas-data#v1.2.0"
     gakumas_contest_simulator: "https://github.com/katabami83/gakumas_contest_simulator.git"
     next: "npm:14.2.4"
     react: "npm:^18"
@@ -1621,17 +1621,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"gakumas-data@https://github.com/surisuririsu/gakumas-data.git#v0.6.1":
-  version: 0.6.1
-  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=f52cb7a5a2e2c752411a4cb15600259cdb863bc2"
-  checksum: 10/88a368f4527b67a51b5b087a70beaf94d374be65f486c457f97bef324fd029093e2425766411bc058a16725a896f8c81670ab4b9a8bc2b0cb88d0c686f9dc1d8
+"gakumas-data@https://github.com/surisuririsu/gakumas-data#v1.2.0":
+  version: 1.2.0
+  resolution: "gakumas-data@https://github.com/surisuririsu/gakumas-data.git#commit=d0b346945f86388f50200d8feb3d388b23307e83"
+  checksum: 10/816a5f3218e3fc6e22702320a295c357e117917cd828218f70405763cc23807986eeff854a5cfad998cc557291038d60f2baea076a7c7b7b1558d7f0ed71ef72
   languageName: node
   linkType: hard
 
 "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0
-  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=a022ed6c2cbf8cbd33ce6c44a0e74d29e2f017a0"
-  checksum: 10/5ff5dea93f2d81dc11e7d15006dfd1b1237383bcbb5cd185d26568b4f118c8624c01a57574cbccefbef2a915262755b574a0028735d1794253a9e4fd65b546a3
+  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=0eed2aaad845eeb82c5da48a4de496c918d07046"
+  checksum: 10/9ca52d116cf0af822ff0fe96e404aa8f5ccf47f3f9bb2edca0c08fa8cbd7e7beaaac0f5719d442a184039c8ff084ff638ac3011dbf85f4b3b1b0fbed549d1324
   languageName: node
   linkType: hard
 
