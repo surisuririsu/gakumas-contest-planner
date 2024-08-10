@@ -1630,8 +1630,8 @@ __metadata:
 
 "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git":
   version: 0.0.0
-  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=0eed2aaad845eeb82c5da48a4de496c918d07046"
-  checksum: 10/9ca52d116cf0af822ff0fe96e404aa8f5ccf47f3f9bb2edca0c08fa8cbd7e7beaaac0f5719d442a184039c8ff084ff638ac3011dbf85f4b3b1b0fbed549d1324
+  resolution: "gakumas_contest_simulator@https://github.com/katabami83/gakumas_contest_simulator.git#commit=c436fe8087a30be67c37d0af6fa0b3e9ed3c7bc6"
+  checksum: 10/bd839c8d85501f87d1060d6f1c89550fcac0f0c38ce020d9f054f2c6274faac2e8d71d39d0ff5ff7f5d7714dafaf579ceecef57a3a66b6c5882f774cd67f78e6
   languageName: node
   linkType: hard
 
