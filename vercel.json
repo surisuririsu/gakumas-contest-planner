@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/test",
+      "destination": "https://gktools.ris.moe/simulator",
+      "permanent": true
+    }
+  ]
+}
